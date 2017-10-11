@@ -1,0 +1,17 @@
+<!--*********  二级页面左边导航开始 *************** -->
+            <div class="xjn-lside">
+                <div class="xjn-title">
+                    <h4 class='xjn-titeng'><span>TEACHER</span> GROUP</h4>
+                    <h3 class='xjn-titchn'><span>师资</span>团队</h3>
+                </div>
+                <div class="xjn-line"></div>
+                <ul class="xjn-catlist">
+                    {pc:content action="category" catid="$top_parentid" num="5" order="listorder ASC" moreinfo="1"}
+                    {loop $data $v}
+                    <li {if $v[catid]==$catid}class="xjn-list active"{else}class="xjn-list"{/if}>
+                        <a href="{$v[url]}"><span>·</span>{$v[catname]}</a>
+                    </li>
+                    {/loop}
+                    {/pc}
+                </ul>
+             </div><!--*********  二级页面左边导航结束 ***************-->

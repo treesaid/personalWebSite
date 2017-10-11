@@ -1,0 +1,64 @@
+{template "content","uek_nav"}
+{template "content","uek_inside_banner"}
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/xjn_xwzx.css" />
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/ljg_gywm.css" />
+
+    <div class="xjn-container">
+        <!-- ************* 内页公共样式左边开始 ******************** -->
+        <!-- 面包屑导航开始 -->
+        <div class="xjn-mbxnav">
+            <a href="{siteurl($siteid)}" class='xjn-home'>首页</a>
+            <span>&gt;</span>
+            <a href="{$CATEGORYS[14][url]}" class='xjn-home'>{$CATEGORYS[71][catname]}</a>
+            <span>&gt;</span>
+            <a href="javascript:;" class='xjn-category'>{$CATEGORYS[$catid][catname]}</a>
+        </div><!-- 面包屑导航结束 -->
+  
+        <div class="xjn-content">
+            {template "content","side_gywm_nav_2"}
+             <!-- **********  新闻资讯内容右侧开始 ************** -->
+             <div class="xjn-newcon">
+                <h3 class="xjn-newstitle">{$CATEGORYS[$catid][catname]}</h3>
+                <!--**** 右侧内容开始 ******-->
+                <div class="xjn-content">
+                    <!-- 图片 -->
+                    <div class="ljg-pic">
+                    </div>
+                    <!-- 文字 -->
+                    <div class="ljg-content-text">
+                        <p>山西优逸客科技有限公司成立于2013年。实训课程是由北京、上海等一线城市的顶尖设计精英与IT专家共同发起，历时一年的调研并结合企业对人才实际需求研发出适合山西大学生的第一套互联网与移动互联网界面设计的UI设计实训体系。在此基础上配以完善的职业规划体系、规范的人才培养流程和标准、良好的专业人才就业指导等服务。是山西UI实训行业的“拓荒者”、企业级产品设计“方案提供商”、山西UI设计职业教育“领导品牌”;UI设 计专业人才“培育基地”。</p>
+                        <p>自成立伊始，优逸客便立志推动山西UI设计行业的快速发展，为社会各行业提供优秀、全面、 专业的UI设计服务，并致力于培养国家和社会紧缺的高级UI设计专业人才。目前成功构建了以实训(平面设计与表现、前端工程师、UI设计)为主的业务模式，在实训实施各个环节制定高标准并通过对严格的把控来保 证实训的质量。公司积极听取各方的反馈意见不断完善自身，从而逐步成长为中国最专业的UI设计人才培育基地。</p>
+                    </div>
+                    <!-- 企业 -->
+                    <div class="ljg-company">
+                        <ul class="ljg-company-ul">
+                            <li class="ljg-company-li clearfix">
+                                <h3>企业文化</h3>
+                                <ol class="clearfix">
+                                    <li><img src="{IMG_PATH}uek/images/ljg_images/ljg-company-zz.png"/></li>
+                                    <li><img src="{IMG_PATH}uek/images/ljg_images/ljg-company-jz.png"/></li>
+                                    <li><img src="{IMG_PATH}uek/images/ljg_images/ljg-company-kb.png"/></li>
+                                </ol>
+                            </li>
+                            <li class="ljg-company-li clearfix">
+                                <h3>企业理念</h3>
+                                <p>有责任，有激情，有梦想</p>
+                            </li>
+                            <li class="ljg-company-li clearfix">
+                                <h3>企业愿景</h3>
+                                <p>让每位优逸客的学员都有份好的工作</p>
+                            </li>
+                            <li class="ljg-company-li clearfix">
+                                <h3>企业目标</h3>
+                                <p>成为中国顶尖的大学生职业实训基地</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </div> 
+{template "content","uek_footer"}
+</body>
+<script src="{JS_PATH}uek/js/xjn_xwzx.js"></script>
+</html>

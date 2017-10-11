@@ -1,0 +1,45 @@
+{template "content","myheader"}
+    <link rel="stylesheet" href="{CSS_PATH}mycss/qiyewenhua.css"/>
+    <script src="{JS_PATH}myjs/myheader.js"></script>
+<div class="web_top">
+    <div class="info">
+        <h1>新闻动态</h1>
+        <span>新闻动态</span>
+        <span>&gt;</span>
+        <a href="">新闻动态 </a>
+        <span>&gt;</span>
+        <a href="">首页 </a>
+        <span class="index">当前位置：</span>
+        <span class="index_location"><img src="{IMG_PATH}img/dwbz.png" alt=""/></span>
+    </div>
+</div>
+<div class="web_bottom">
+    <div class="web_bottom_contain">
+        {template "content","slide_nav2"}
+        <ul class="web_right">
+            <p>新闻动态</p>
+            {pc:content action="lists" catid="$catid" num="5" siteid="$siteid" order="id DESC" page="$pages"}
+            {loop $data $v}
+            <li><a href="{$v[url]}">· {$v[title]} <span class="date">{date("Y-m-d",$v[inputtime])}</span></a></li>
+            {/loop}
+            <div class="page">
+                <div class="page_information">共96条信息 | 1/10</div>
+                <!-- {$pages} -->
+                <a href="" class="page_a_first">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+                <a href="">5</a>
+                <a href="">6</a>
+                <a href="">7</a>
+                <a href="">8</a>
+                <a href="">9</a>
+                <a href="">10</a>
+                <span>Go</span>
+                <input type="text"/>
+            </div>
+            {/pc}
+        </ul>
+    </div>
+</div>
+{template "content","myfooter"}

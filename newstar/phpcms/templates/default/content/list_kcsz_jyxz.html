@@ -1,0 +1,151 @@
+{template "content","uek_nav"}
+{template "content","uek_inside_banner"}
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/xjn_xwzx.css" />
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/ljg_kcsz_jyxz.css" />
+
+
+        <div class="xjn-container">
+            <!-- ************* 内页公共样式左边开始 ******************** -->
+            <!-- 面包屑导航开始 -->
+            <div class="xjn-mbxnav">
+                <a href="{siteurl($siteid)}" class='xjn-home'>首页</a>
+                <span>&gt;</span>
+                <a href="{$CATEGORYS[14][url]}" class='xjn-category'>{$CATEGORYS[9][catname]}</a>
+                <!-- <span>&gt;</span> -->
+                <!-- <a href="javascript:;" class='xjn-category'>{$CATEGORYS[$catid][catname]}</a> -->
+            </div><!-- 面包屑导航结束 -->
+      
+            <div class="xjn-content">
+
+            {template "content","side_kcjs_nav"}
+
+                 <!-- **********  新闻资讯内容右侧开始 ************** -->
+                <div class="xjn-newcon">
+                    
+                    <!-- 第一部分 -->
+                    <div class="ljg-section-1">
+                        <h1 class="ljg-section-num">01</h1>
+                        <h2 class="ljg-section-title">
+                            全｜国｜行｜业｜薪｜资｜概｜况
+                        </h2>
+                        <p>
+                            {pc:content action="lists" catid="$catid" num="1"}
+                            {loop $data $v}
+                                {$v[content]}
+                            {/loop}
+                            {/pc}
+                        </p>
+                        <div class="ljg-section-1-pic"></div>
+                    </div><!-- 第一部分结束 -->
+
+                    <!-- 第二部分 -->
+                    <div class="ljg-section-2">
+                        <h1 class="ljg-section-num">02</h1>
+                        <h2 class="ljg-section-title">
+                            各｜大｜城｜市｜就｜业｜薪｜资
+                        </h2>
+                        <!-- 说明 -->
+                        <div class="ljg-explain">
+                            <!-- 颜色 -->
+                            <ul class="ljg-explain-color">
+                                <li class="ljg-color-1"></li>
+                                <li class="ljg-color-2"></li>
+                                <li class="ljg-color-3"></li>
+                                <li class="ljg-color-4"></li>
+                                <li class="ljg-color-5"></li>
+                                <li class="ljg-color-6"></li>
+                                <li class="ljg-color-7"></li>
+                            </ul>
+                            <!-- 文字 -->
+                            <ul class="ljg-explain-text">
+                                <li>3-4.5k</li>
+                                <li>4.5-6k</li>
+                                <li>6-8k</li>
+                                <li>8-10k</li>
+                                <li>10-15k</li>
+                                <li>15-20k</li>
+                                <li>20-25k</li>
+                            </ul>
+                        </div>
+                        <!-- 图表 -->
+                        <ul class="ljg-chart-container clearfix">
+                            <!-- 一个图表 -->
+                            <li class="ljg-chart-items">
+                                <!-- 图片 -->
+                                <div class="ljg-chart-pic-container">
+                                    <div class="ljg-chart-pic">
+                                        <img src="{IMG_PATH}uek/images/ljg_images/ljg-chart.png"/>
+                                    </div>
+                                    <p>(近一年12031份样本)</p>
+                                </div>
+                                <!-- 文字 -->
+                                <div class="ljg-chart-text">
+                                    <strong>北京</strong>
+                                    平均薪资：
+                                    <strong>15000元</strong>
+                                    可信度：
+                                    <strong>高</strong>
+                                </div>
+                            </li> 
+                            <li class="ljg-chart-items">
+                                <!-- 图片 -->
+                                <div class="ljg-chart-pic-container">
+                                    <div class="ljg-chart-pic">
+                                        <img src="{IMG_PATH}uek/images/ljg_images/ljg-chart.png"/>
+                                    </div>
+                                    <p>(近一年12031份样本)</p>
+                                </div>
+                                <!-- 文字 -->
+                                <div class="ljg-chart-text">
+                                    <strong>上海</strong>
+                                    平均薪资：
+                                    <strong>15000元</strong>
+                                    可信度：
+                                    <strong>高</strong>
+                                </div>
+                            </li> 
+                            <li class="ljg-chart-items">
+                                <!-- 图片 -->
+                                <div class="ljg-chart-pic-container">
+                                    <div class="ljg-chart-pic">
+                                        <img src="{IMG_PATH}uek/images/ljg_images/ljg-chart.png"/>
+                                    </div>
+                                    <p>(近一年12031份样本)</p>
+                                </div>
+                                <!-- 文字 -->
+                                <div class="ljg-chart-text">
+                                    <strong>广州</strong>
+                                    平均薪资：
+                                    <strong>12000元</strong>
+                                    可信度：
+                                    <strong>高</strong>
+                                </div>
+                            </li> 
+                            <li class="ljg-chart-items">
+                                <!-- 图片 -->
+                                <div class="ljg-chart-pic-container">
+                                    <div class="ljg-chart-pic">
+                                        <img src="{IMG_PATH}uek/images/ljg_images/ljg-chart.png"/>
+                                    </div>
+                                    <p>(近一年12031份样本)</p>
+                                </div>
+                                <!-- 文字 -->
+                                <div class="ljg-chart-text">
+                                    <strong>杭州</strong>
+                                    平均薪资：
+                                    <strong>12000元</strong>
+                                    可信度：
+                                    <strong>高</strong>
+                                </div>
+                            </li>                          
+                        </ul>
+                    
+                    </div><!-- 第二部分结束 -->
+                </div>
+            </div><!-- 内容部分结束 -->
+        </div> 
+
+{template "content","uek_footer"}
+</body>
+<script src="{JS_PATH}uek/js/xjn_xwzx.js"></script>
+</html>

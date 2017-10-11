@@ -1,0 +1,9 @@
+
+<ul class="box-outer">
+	<li class="box" ng-repeat="v in list">
+		<a href="#/show/{{v.id}}">
+			<div class="img"><img src="{{v.images[0]||'images/top_logo.png'}}" alt=""></div>
+			<span>{{v.title}}</span>
+		</a>
+	</li>
+</ul>

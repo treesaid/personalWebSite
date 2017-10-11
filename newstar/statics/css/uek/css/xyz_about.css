@@ -1,0 +1,34 @@
+/****************** 关于我们 *****************/
+.xyz-about-box{
+    width:1200px;
+    height:auto;
+    margin:30px auto;
+    border: 1px solid #E8E8E8;
+    border-top: 2px solid #94D43B;
+}
+/*************** 标题 *************/
+.xyz-about-title{
+    width:1140px;
+    height:84px;
+    font-size:26px;
+    line-height:84px;
+    color:#222;
+    margin:0 auto;
+}
+/******** 关于我们静态图片 ********/
+.xyz-about-img{
+    width:1140px;
+    height:374px;
+    margin:0 auto;
+    overflow:hidden;
+}
+/************** 内容 ***************/
+.xyz-about-content{
+    width:1140px;
+    height:auto;
+    font-size:14px;
+    color:#666;
+    line-height:24px;
+    margin:30px auto;
+    margin-bottom:60px;
+}

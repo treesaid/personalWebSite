@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en"> 
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>广州欢腾</title>
+	<link rel="stylesheet" href="{CSS_PATH}mycss/reset.css">
+	<!-- <link rel="stylesheet" href="homepage.css"> -->
+	<link rel="stylesheet" href="{CSS_PATH}mycss/homepage.css">
+	<script src="{JS_PATH}myjs/jquery.js"></script>
+	<script src="{JS_PATH}myjs/index.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="header">
+		<div class="head">
+			<p class="welcome"><span>·</span>欢迎进入本网站！</p>
+			<ul class="head-ul">
+				<li class="headli"><b class="icon">&#xe601;</b><a href="">设为首页</a></li>
+				<li class="headli"><b class="icon">&#xe602;</b><a href="">加入收藏</a></li>
+				<li class="headli"><b class="icon">&#xe600;</b><a href="inpage/contact.html">联系我们</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 导航 -->
+	<div class="nav">
+		<div class="nav-in">
+			<img src="{IMG_PATH}img/logo.png" alt="" class="logo">
+			<div class="navul">
+				{pc:content action="category" catid="0" num="10" siteid="$siteid" order="listorder ASC"}
+				<!-- {php var_dump($data)} -->
+						<a href="{$siteurl($siteid)}" class="nav-a">
+							<img src="{IMG_PATH}img/nav1.png" alt="" class="nav-pic" >
+							<img src="{IMG_PATH}img/hnav1.jpg" alt="" class="hnav-pic">
+						</a>
+					{loop $data $v}
+						<a href="{$v[url]}" class="nav-a">
+							<img src="{$v[image]}" alt="" class="nav-pic">
+							<img src="{$v[description]}" alt="" class="hnav-pic">
+						</a>
+					{/loop}
+				{/pc}
+				<!-- <a href="inpage/about.html" class="nav-a">
+					<img src="{IMG_PATH}img/nav2.png" alt="" class="nav-pic">
+					<img src="{IMG_PATH}img/hnav2.jpg" alt="" class="hnav-pic">
+				</a> -->
+				
+			</div>
+		</div>
+	</div>
+	

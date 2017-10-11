@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" ng-app='app'>
+<head>
+	<meta charset="UTF-8">
+	<title>手机移动端布局</title>
+	<meta name="viewport" content="width=device-width">
+	<meta name="referrer" content="never">
+	<link rel="stylesheet" href="style/base.css">
+	<link rel="stylesheet" href="style/swiper.min.css">
+	<link rel="stylesheet" href="style/index.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/base.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+	<script src="http://cdn.bootcss.com/angular.js/1.5.0/angular-sanitize.min.js"></script>
+	<script src="js/controller.js"></script>
+	<script src="js/filter.js"></script>
+	<script src="js/service.js"></script>
+	<script src="js/directive.js"></script>
+	<script src="js/index.js"></script>
+</head>
+<body>
+	<div class="container" ng-view>
+		
+	</div>
+	<div class="zhezhao" none></div>
+	<div class="aside">
+		<div class="aside-top">
+			<div class="aside-login">
+				<div class="login-image">
+					<div class="image-tou">
+						<img src="images/1.jpg" alt="">
+					</div>
+				</div>
+				<div class="login-title">请登录</div>
+			</div>
+			<div class="aside-load">
+				<a class="load-box" href="#/cang" none>
+					<div class="load-icon iconfont">&#xe655;</div>
+					<div class="load-title">我的收藏</div>
+				</a>
+				<div class="load-box">
+					<div class="load-icon iconfont">&#xe746;</div>
+					<div class="load-title">离线下载</div>
+				</div>
+			</div>
+		</div>
+		<div class="aside-home">
+			<a href="#/" none>
+				<div class="home-icon iconfont">&#xe632;</div>
+			     <div class="home-title">首页</div>
+			</a>
+		</div>
+		<div class="aside-content" ng-controller="theme">
+			<div class="aside-item" ng-repeat="v in theme" >
+				<div class="item-title">
+					<a href="#/theme/{{v.id}}" none>{{v.name}}</a>
+				</div>
+				<div class="aside-add iconfont">&#xe618;</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

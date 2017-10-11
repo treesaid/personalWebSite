@@ -1,0 +1,25 @@
+http://css3pie.com/
+注意路径是相对html文件
+
+如果页面中有用到css3的圆角、阴影的
+
+html: 1.给需要用到的标签添加一个pie的类名
+      2.在html里引入js文件：
+     	 <!--[if lt IE 11]>
+     	 <script type="text/javascript" src="css/PIE/PIE.js"></script> 
+     	 <![endif]--> 
+	
+
+css: 1. 加一个 behavior:url(css/PIE/PIE.htc);
+js： 1. $(function() { 
+             if($("body")[0].attachEvent){
+                $('.pie').each(function() {  
+            	   PIE.attach(this);  
+       	        });
+    	     }    
+      });
+     
+渐变的解决方法：
+            background:linear-gradient(red,yellow);
+            -pie-background:linear-gradient(red,yellow);
+            behavior:url(PIE/PIE.htc);

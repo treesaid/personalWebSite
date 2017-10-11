@@ -1,0 +1,27 @@
+
+
+    <div class="xjn-search">
+        <!--**左侧导航开始**-->
+        <ul class="xjn-lside">
+            <li class="xjn-list">
+                <a href="{$CATEGORYS[78][url]}" class="xjn-item{if $catid==78}  active{/if}">就业前景<span>&#xe6e5;</span></a>
+            </li>
+            <li class="xjn-list">
+                <a href="{$CATEGORYS[79][url]}" class="xjn-item{if $catid==79}  active{/if}">就业报告<span>&#xe6e5;</span></a>
+            </li>
+            {pc:content action="lists" catid=86}
+            {loop $data $v}
+                <li class="xjn-list">
+                    <a href="{$v[url]}" class="xjn-item{if $catid==86}  active{/if}">{$v[title]}<span>&#xe6e5;</span></a>
+                </li>
+            {/loop}
+            {/pc}
+            <li class="xjn-list">
+                <a href="{$CATEGORYS[81][url]}" class="xjn-item{if $catid==81}  active{/if}">
+                免费体验<span>&#xe6e5;</span></a>
+            </li>
+            <li class="xjn-list">
+                <a href="{$CATEGORYS[82][url]}" class="xjn-item{if $catid==82}  active{/if}">网站地图<span>&#xe6e5;</span></a>
+            </li>
+        </ul><!--**左侧导航结束**-->
+                

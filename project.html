@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>许嘉宁作品集</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,
+maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="css/project.css" />
+        <link rel="stylesheet" type="text/css" href="css/response.css" />
+        <script type="text/javascript" src="js/jquery.js"></script>
+    </head>
+    <body ng-app="app">
+    <div class="cont">
+        <div class="aboutme">
+            <div class="pic"></div>
+            <h1>许嘉宁</h1>
+            <h2>前端工程师</h2>
+            <div class="info">
+                <a href="http://xujianing.duapp.com/index.html" target="_blank"><i class="iconfont">&#xe629;</i></a><span>|</span>
+                <a href="https://github.com/xujianingwui" target="_blank"><i class="iconfont">&#xec76;</i></a><span>|</span>
+                <a href="http://mail.163.com/" target="_blank"><i class="iconfont">&#xe70f;</i></a>
+            </div>
+        </div>
+    </div>
+    <div class="container nav-con">
+        <div class="row">
+            <ul class="navlist">
+                <li class='nav active'>
+                    <a href="#/">项目</a>
+                </li>
+                <li class='nav'>
+                    <a href="#/apply">移动</a>
+                </li>
+                <li class='nav'>
+                    <a href="#/website">应用</a>
+                </li>
+                <li class='nav'>
+                    <a href="#/game">其他</a>
+                </li>
+            </ul><!-- ***** 导航部分结束 ***** -->      
+        </div>
+    </div>
+        <div class="container" ng-view>
+                     
+        </div> 
+    </body>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/project.js"></script>
+    <script type="text/javascript">
+    var nownav=$('.nav:first');
+        $('.nav').click(function(){
+            $('.nav').removeClass('active');
+            $(this).addClass('active');
+            // $('.pro-list').removeClass('show');
+            // $('.pro-list').eq($(this).index()).addClass('show');
+        })
+     var sHeight=$(window).height();
+     $('.cont-bg').css({height:sHeight});
+    </script>
+</html>

@@ -1,0 +1,53 @@
+
+    {template "content","uek_nav"}
+    {template "content","uek_inside_banner"}
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/xyz_qd.css" />
+    <link rel="stylesheet" href="{CSS_PATH}uek/css/ly_ketx_kbsj.css"/>
+    <link rel="stylesheet" href="{CSS_PATH}uek/css/szh_ketx_gkk.css"/>
+    <link rel="stylesheet" href="{CSS_PATH}uek/css/ld_kcap.css">
+
+
+
+<!--***************内容*****************-->
+    <div class="ly-container">
+    <!-- ***********面包屑导航************* -->
+        <div class="ly-navagation-box">
+            <ul class="ly-navnavagation">
+                <li class="ly-con"><a href="{siteurl($siteid)}">首页</a></li>
+                <li class="ly-con"><span>&gt;</span></li>
+                <li class="ly-con ly-con-active"><a href="javascript:;">{$CATEGORYS[$top_parentid][catname]}</a></li>
+            </ul>
+        </div>
+    <!-- ***********左侧L型导航  l************* -->
+        <div class="ly-nav-l">
+            <!-- 头部 t-->
+            <div class="ly-nav-lt">
+                <div class="ly-nav-lt-en"><strong>CURRICULUM</strong> <span>SYSTEM</span></div>
+                <div class="ly-nav-lt-cn"><strong>课程</strong><span>体系</span></div>
+            </div>
+            <!-- 装饰线 -->
+            <div class="ly-nav-l-line"></div>
+            <!-- 内容区 -->
+            <div class="ly-nav-l-con-box">
+            {pc:content action="category" catid="$top_parentid" moreinfo="1"}
+            {loop $data $v}
+                <div class="ly-nav-l-con-lis">
+                    <h1 class="ly-nav-l-con-caption">
+                       <span>·</span>
+                        <a href="{$v[url]}" {if $catid==$v[catid]}style="color:#01B5FF;"{/if}>{$v[catname]}</a>
+                    </h1>
+                </div>
+            {/loop}
+            {/pc}
+            </div>
+        </div>
+    <!-- ***********右侧内容区  con************* -->
+        <div class="xjn-newcon">
+            {$content}
+        </div>
+    <!--***************结束*****************-->
+    </div>
+
+    {template "content","uek_footer"}
+    <script src="{JS_PATH}uek/js/jquery.min.js"></script>
+    <script src="{JS_PATH}uek/js/ld_kcap.js"></script>

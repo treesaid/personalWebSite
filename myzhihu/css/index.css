@@ -1,0 +1,90 @@
+/*头部*/
+header{
+	width: 100%;
+	height:100px;
+	position: fixed;
+	left:0;
+	right: 0;
+	top:0;
+	background:#fff;
+	box-shadow: 0 0 5px #ADADAD;
+}
+.theme-inner{
+	width: 960px;
+	margin:0 auto;
+}
+.logo{
+	width: 220px;
+	height: 100px;
+	display: block;
+	float: left;
+	background:url(../images/top_logo.png) no-repeat 0 13px;
+}
+.themes{
+	width: 720px;
+	float: left;
+	height: 100%;
+}
+.theme{
+	width: 120px;
+	text-align: center;
+	float: left;
+	line-height: 50px;
+	color:#999;
+}
+.theme:hover a{
+	color:#25B2FE;
+}
+section{
+	padding-top:150px;
+	background:#F9F9F9;
+}
+.content-inner{
+	width: 960px;
+	margin:0 auto;
+	overflow: hidden;
+}
+footer{
+	width: 100%;
+	height:80px;
+	background:#272822;
+	text-align: center;
+	line-height: 80px;
+}
+/*内容部分*/
+.list{
+   width: 840px;
+   overflow: hidden;
+   margin:0 auto;
+}
+a{
+	text-decoration: none;
+	color:#666;
+}
+.box{
+	width: 260px;
+	height: 334px;
+	padding:20px;
+	background:#fff;
+	float: left;
+	margin:10px;
+}
+.box .img{
+	width: 260px;
+	height: 260px;
+	overflow: hidden;
+	margin-bottom: 14px;
+}
+.box .img img{
+	height: 260px;
+}
+.box span{
+	width: 100%;
+	line-height: 1.5;
+	display: block;
+	height: 40px;
+	color:#666;
+}
+.top-img img{
+    width: 100%;
+}

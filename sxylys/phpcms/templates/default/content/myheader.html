@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}sxylys/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}sxylys/css/header.css" />
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}sxylys/css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}sxylys/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}sxylys/css/swiper.min.css" />
+</head>
+<body>
+    <!-- ******* banner轮播图 ************* -->
+    <div class="banner swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#"><img src="{IMG_PATH}sxylys/img/banner1.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="{IMG_PATH}sxylys/img/banner2.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="{IMG_PATH}sxylys/img/banner3.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="{IMG_PATH}sxylys/img/banner4.jpg" alt=""></a></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div><!-- banner 结束 -->
+    <!-- ************ 导航 ***************** -->
+    <ul class="nav">
+        {pc:content  action="category" catid="0" num="10" siteid="$siteid" order="listorder ASC"}
+        {loop $data $v}
+        <li><a href="{$v[url]}">{$v[catname]}</a></li>
+        {/loop}
+        {/pc}
+    </ul>

@@ -1,0 +1,37 @@
+<div class="header">
+	<a class="header-icon header-back iconfont" href="#/">&#xe697;</a>
+	<div class="icon-right">
+		<div class="header-icon header-share iconfont" show>&#xe613;</div>
+		<div class="header-icon header-shou  iconfont" cut>&#xe655;</div>
+		<div class="num-icon">
+			<a class="header-icon header-lun iconfont" href="#/comment/{{d.id}}">&#xe61d;</a>
+			<div class="icon-num">3</div>
+		</div>
+		<div class="num-icon">
+			<div class="header-icon header-zan iconfont" cut>&#xe708;</div>
+			<div class="icon-num">12</div>
+		</div>
+	</div>
+</div>
+<div class="share-box">
+	<div class="share-title">分享</div>
+	<div class="share-content">
+		<div class="share-item">
+			<div class="share-img"></div>
+			<div class="share-mess">新浪微博</div>
+		</div>
+	</div>
+</div>
+<div class="content-outer">
+   <section>
+		  <div class="content-inner">
+		  	<link rel="stylesheet" href="{{d.css[0]}}">
+			<div class='top-img'>
+				<img src="{{d.image}}" alt="">
+				<div class="batitle showtitle">{{d.title}}</div>
+			</div>
+			<article ng-bind-html='d.body'>{{d.body}}</article>
+		 </div>
+	</section>
+	<footer></footer>
+ </div>

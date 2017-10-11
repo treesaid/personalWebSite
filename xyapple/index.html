@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="response.css">
+    <link rel="stylesheet" href="apple.css">
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    @font-face {font-family: 'iconfont';
+        src: url('iconfont.eot'); /* IE9*/
+        src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('iconfont.woff') format('woff'), /* chrome、firefox */
+        url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+        url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+    }
+    /*---------banner------*/
+    .banner{
+        width: 100%;
+        height: 464px;
+        background:#000 url("img/banner.jpg") no-repeat center 50px;
+        background-size:contain;
+        margin-bottom:3px;
+        position:relative;
+    }
+    .banner .logo{
+        width: 95px;
+        height: 24px;
+        background-image:url("img/iphone.png");
+        background-repeat:no-repeat;
+        background-size:95px 24px;
+        left: 50%;
+        top:60px;
+        margin-left:-48px;
+        position: relative;
+    }
+    .banner  h3{
+        width:100%;
+        height: 42px;
+        color: #fff;
+        font-size: 30px;
+        text-align: center;
+        line-height: 42px;
+        font-weight:normal;
+        position: absolute;
+        left: 0;
+        top:95px;
+
+    }
+    /*---------banner------*/
+    /*-----------4个活动----------*/
+    .container-fluid>.row>div[class^=col]{
+        height: 200px;
+        border-right: 1px solid #fff;
+    }
+    .item{
+        width: 100%;
+        height: 100%;
+        background-repeat:no-repeat;
+        background-position:center;
+    }
+    .item1{
+        background-image:url("img/s1.jpg");
+    }
+    .item2{
+        background-image:url("img/s2.jpg");
+    }
+    .item3{
+        background-image:url("img/s3.jpg") ;
+    }
+    .item4{
+        background-image:url("img/s4.jpg") ;
+    }
+    @media screen and  (min-width:735px){
+        .item1{
+            background-image:url("img/m1.jpg");
+        }
+        .item2{
+            background-image:url("img/m2.jpg");
+        }
+        .item3{
+            background-image:url("img/m3.jpg");
+        }
+        .item4{
+            background-image:url("img/m4.jpg");
+        }
+    }
+    @media screen and  (min-width:1068px){
+        .item1{
+            background-image:url("img/l1.jpg");
+        }
+        .item2{
+            background-image:url("img/l2.jpg");
+        }
+        .item3{
+            background-image:url("img/l3.jpg");
+        }
+        .item4{
+            background-image:url("img/l4.jpg");
+        }
+    }
+    .top{
+        width: 100%;
+        height: 44px;
+        background: #000;
+    }
+     .c-top{
+        max-width: 1000px;
+        height: 44px;
+        margin:0 auto;
+        text-align: justify;
+        /*vertical-align: middle;*/
+        line-height: 44px;
+         cursor: default;
+         -webkit-user-select: none;
+         -moz-user-select: none;
+         -ms-user-select: none;
+         user-select: none;
+         position: relative;
+
+    }
+    .c-top:after{
+        content:"";
+        display:inline-block;
+        width:100%;
+    }
+    .c-top>.top-nav{
+        display:inline-block;
+        color: #fff;
+        font-family:"微软雅黑";
+        font-size: 14px;
+        text-decoration:none;
+        padding: 0 15px;
+        font-style: normal;
+        transition: all 0.5s;
+    }
+    .c-top .icon{
+        font-family:"iconfont";
+        font-size: 24px;
+    }
+    .c-top>.top-nav:hover{
+        color: #999;
+    }
+    /*-----------4个活动----------*/
+
+    /*----------缩小导航-------*/
+    .c-top-sm{
+        display:none;
+        width: 100%;
+        height: 44px;
+    }
+    .c-top>.top-nav.closebtn{
+        position: absolute;
+        right: 10px;
+        top:0;
+        font-size:20px;
+        display: none;
+    }
+    @media screen and (max-width: 735px){
+        .c-top{
+            display: none;
+        }
+        .c-top-sm{
+            display: block;
+        }
+        .banner{
+            width: 100%;
+            height: 361px;
+            background:#000 url("img/large-ban.jpg") no-repeat center;
+            background-size:contain;
+        }
+    }
+    .c-top-sm{
+        width: 100%;
+        height: 48px;
+        text-align: justify;
+        /*vertical-align: middle;*/
+        line-height: 48px;
+        cursor: default;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .c-top-sm:after{
+        content:"";
+        display:inline-block;
+        width:100%;
+    }
+    .c-top-sm>a{
+        display:inline-block;
+        color: #fff;
+        font-family:"微软雅黑";
+        font-size: 14px;
+        text-decoration:none;
+        padding: 0 15px;
+        font-style: normal;
+        transition: all 0.5s;
+        position: relative;
+    }
+    .c-top-sm .icon{
+        font-family:"iconfont";
+        font-size: 24px;
+    }
+    .c-top-sm>a:hover{
+        color: #999;
+    }
+    .c-top-sm .line{
+        width: 48px;
+        height: 48px;
+        display: inline-block;
+    }
+    .c-top-sm .line span:nth-child(1){
+        background: #fff;
+        width: 18px;
+        height: 1px;
+        margin-top: 0px;
+        position: absolute;
+        left:35%;
+        top: 50%;
+        transition:all 0.3s ease-in;
+    }
+    .c-top-sm .line span:nth-child(2){
+        background: #fff;
+        width: 18px;
+        height: 1px;
+        position: absolute;
+        left:35%;
+        top: 50%;
+        margin-top: -8px;
+        transition:all 0.3s ease-in;
+    }
+    .c-top-sm .line:hover span{
+        background: #999;
+    }
+    /*----------缩小导航-------*/
+
+
+    /*--------隐藏菜单-----*/
+    .menu{
+         width: 100%;
+         height: 100%;
+         box-sizing: border-box;
+         padding: 0 48px;
+         position: absolute;
+         left:0;
+         top:48px;
+         background: #000;
+         display:none;
+         z-index: 100;
+     }
+    .menu.active{
+        display:block;
+    }
+    .menu .menu-list{
+        display: block;
+        width: 100%;
+        height: 48px;
+        border-bottom: 1px solid #333;
+        font-size:16px;
+        line-height: 48px;
+        color:#fff;
+        opacity: 0;
+        transform: translate(15px,-15px);
+        transition: all 0.4s;
+    }
+    .menu .menu-list:hover{
+        color:#808080;
+    }
+    .menu .sear{
+        width: 100%;
+        height: 48px;
+        box-sizing: border-box;
+        padding-left:28px ;
+        border-bottom: 1px solid #fff;
+        position: relative;
+
+    }
+    .menu .sear input{
+        width: 100%;
+        height: 100%;
+        font-size: 18px;
+        line-height:48px ;
+        border: 0;
+        color: #fff;
+
+    }
+    .menu .sear .ss{
+        display: block;
+        width: 28px;
+        height: 48px;
+        font-family:'iconfont';
+        font-size: 18px;
+        color: #fff;
+        font-style: normal;
+        line-height: 48px;
+        position:absolute;
+        left: 0;
+        top:0;
+    }
+ /*--------隐藏菜单-----*/
+    @media screen and (min-width:735px){
+        .menu{
+            display: none !important;
+        }
+    }
+</style>
+<body>
+<!-------------导航----------- -->
+<div class="top">
+    <div class="c-top">
+        <a href="#" class="top-nav icon">&#xe603;</a>
+        <a href="#" class="top-nav">Mac</a>
+        <a href="#" class="top-nav">iPad</a>
+        <a href="#" class="top-nav">iPhone</a>
+        <a href="#" class="top-nav">Watch</a>
+        <a href="#" class="top-nav">Music</a>
+        <a href="#" class="top-nav">技术支持</a>
+        <a href="#" class="top-nav icon search">&#xe601;
+        </a>
+        <div class="top-nav icon bag">&#xe602;
+            <div class="bag-inner">
+                <span class="sanjiao"></span>
+                <div class="con">
+                    <p>你的购物袋是空的</p>
+                    <a href="" class="bag-link"><i class="tb">&#xe60e;</i>购物袋</a>
+                    <a href="" class="bag-link"><i class="tb">&#xe60e;</i>收藏</a>
+                    <a href="" class="bag-link"><i class="tb">&#xe60f;</i>订单</a>
+                    <a href="" class="bag-link"><i class="tb">&#xe60c;</i>账户</a>
+                    <a href="" class="bag-link"><i class="tb">&#xe60a;</i>登录</a>
+                </div>
+            </div>
+        </div>
+        <div class="closebtn">
+            <span class="l1"></span>
+            <span class="l2"></span>
+        </div>
+        <div class="search-box">
+            <div class="input-box">
+                <span class="input-left">&#xe601;</span>
+                <input type="text" placeholder="搜索apple.com">
+            </div>
+            <div class="quick-search">
+                    <p>快速链接</p>
+                    <div class="link-box">
+                        <a href="" class="link">查找零售店</a>
+                        <a href="" class="link">配件</a>
+                        <a href="" class="link">iPod</a>
+                        <a href="" class="link">iOS</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="c-top-sm">
+        <a href="#" class="line">
+            &nbsp;&nbsp;
+            <span></span>
+            <span></span>
+        </a>
+        <a href="#" class="icon">&#xe603;</a>
+        <a href="#" class="icon">&#xe602;</a>
+    </div>
+    <div class="menu">
+        <a href="" class="menu-list">Mac</a>
+        <a href="" class="menu-list">iPad</a>
+        <a href="" class="menu-list">iPhone</a>
+        <a href="" class="menu-list">Watch</a>
+        <a href="" class="menu-list">Music</a>
+        <a href="" class="menu-list">技术支持</a>
+        <div class="menu-list sear">
+            <i class="ss">&#xe601;</i><input type="text" value="搜索apple.com">
+        </div>
+        <!--<div class="search-hide">-->
+            <!--<div class="search-box">-->
+                <!--<i class="ss">&#xe601;</i><input type="text" value="搜索apple.com">-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+</div>
+<div class="banner">
+    <div class="logo"></div>
+    <h3>7,在此。</h3>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="item item1"></div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="item item2"></div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 ">
+            <div class="item item3"></div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="item item4"></div>
+        </div>
+    </div>
+</div>
+<!-- footer -->
+<div class="footer">
+    <div class="con">
+        <div class="msg">双镜头摄像头仅于 iPhone 7 Plus 提供。亮黑色外观仅于 128GB 及以上存储容量的机型提供。</div>
+        <div class="about">
+            <div class="list">
+                <h3>选购及了解</h3>
+                <ul>
+                    <li><a href="">Mac</a></li>
+                    <li><a href="">iPad</a></li>
+                    <li><a href="">iPhone</a></li>
+                    <li><a href="">Watch</a></li>
+                    <li><a href="">Music</a></li>
+                    <li><a href="">iTunes</a></li>
+                    <li><a href="">iPod</a></li>
+                    <li><a href="">配件</a></li>
+                </ul>
+            </div>
+            <div class="list">
+                <h3>Apple Store 商店</h3>
+                <ul>
+                    <li><a href="">查找零售店</a></li>
+                    <li><a href="">Genius Bar 天才吧</a></li>
+                    <li><a href="">讲座和学习</a></li>
+                    <li><a href="">青少年活动</a></li>
+                    <li><a href="">Apple Store App</a></li>
+                    <li><a href="">翻新和优惠</a></li>
+                    <li><a href="">分期付款</a></li>
+                    <li><a href="">重复使用和循环利用</a></li>
+                    <li><a href="">订单状态</a></li>
+                    <li><a href="">选购帮助</a></li>
+                </ul>
+            </div>
+            <div class="list">
+                <h3>教育应用</h3>
+                <ul>
+                    <li><a href="">Apple 与教育</a></li>
+                    <li><a href="">高校师生选购</a></li>
+                    <li><a href=""></a></li>
+                    <h3>商务应用</h3>
+                    <li><a href="">Apple 与商务</a></li>
+                    <li><a href="">商务选购</a></li>
+                </ul>
+            </div>
+            <div class="list">
+                <h3>帐户</h3>
+                <ul>
+                    <li><a href="">管理你的 Apple ID</a></li>
+                    <li><a href="">Apple Store 帐户</a></li>
+                    <li><a href="">iCloud.com</a></li>
+                    <li><a href=""></a></li>
+                    <h3>Apple 价值观</h3>
+                    <li><a href="">辅助功能</a></li>
+                    <li><a href="">环境责任</a></li>
+                    <li><a href="">隐私</a></li>
+                    <li><a href="">供应商责任</a></li>
+                </ul>
+            </div>
+            <div class="list">
+                <h3>关于 Apple</h3>
+                <ul>
+                    <li><a href="">Apple 资讯</a></li>
+                    <li><a href="">工作机会</a></li>
+                    <li><a href="">媒体资讯</a></li>
+                    <li><a href="">活动</a></li>
+                    <li><a href="">联系 Apple</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="xg-box">
+            <p class="method">
+                更多选购方式：前往 <a href="">Apple Store 零售店</a>，致电 400-666-8800 或查找在你附近的<a href="">授权经销商。</a>
+            </p>
+            <div class="copyright">
+                <p>Copyright &copy;2016 Apple Inc. 保留所有权利。</p>
+                <div class="serve">
+                    <a href="">隐私政策</a>
+                    <a href="">使用条款</a>
+                    <a href="">销售政策</a>
+                    <a href="">法律信息</a>
+                    <a href="">网站地图</a>
+                </div>
+                <div class="china">
+                    <a href="#"><span></span>中国</a>
+                </div>
+            </div>
+        </div>
+        <p class="gongan">京公安网安备 11010502008968 京ICP备10214630</p>
+    </div>
+    <!--响应式footer-->
+    <div class="sm-footer">
+        <h3 class="msg">双镜头摄像头仅于 iPhone 7 Plus 提供。亮黑色外观仅于 128GB 及以上存储容量的机型提供。</h3>
+        <ul class="list-box">
+            <li class="list">
+                <h3 class="click-open"><i class="open">+</i>选购及了解</h3>
+                <div class="hide-link">
+                    <a href="">Mac</a>
+                    <a href="">iPad</a>
+                    <a href="">iPhone</a>
+                    <a href="">Watch</a>
+                    <a href="">Music</a>
+                    <a href="">iTunes</a>
+                    <a href="">iPod</a>
+                    <a href="">配件</a>
+                </div>
+            </li>
+            <li class="list">
+                <h3 class="click-open"><i class="open">+</i>Apple Store 商店</h3>
+                <div class="hide-link">
+                    <a href="">Genius Bar 天才吧</a>
+                    <a href="">讲座和学习</a>
+                    <a href="">青少年活动</a>
+                    <a href="">Apple Stroe App</a>
+                    <a href="">翻新和优惠</a>
+                    <a href="">分期付款</a>
+                    <a href="">重复使用和循环利用</a>
+                    <a href="">订单状态</a>
+                    <a href="">选购帮助</a>
+                </div>
+            </li>
+            <li class="list">
+                <h3 class="click-open"><i class="open">+</i>教育应用</h3>
+                <div class="hide-link">
+                    <a href="">Apple 与教育</a>
+                    <a href="">高校师生选购</a>
+                </div>
+            </li>
+            <li class="list">
+                <h3 class="click-open"><i class="open">+</i>商务应用</h3>
+                <div class="hide-link">
+                    <a href="">Apple 与商务</a>
+                    <a href="">商务选购</a>
+                </div>
+            </li>
+            <li class="list">
+                <h3 class="click-open"><i class="open">+</i>账户</h3>
+                <div class="hide-link">
+                    <a href="">管理你的Apple ID</a>
+                    <a href="">App Store 商店</a>
+                    <a href="">iCloud.com </a>
+                    <a href="">Apple Stroe App</a>
+                </div>
+            </li>
+            <li class="list">
+                <h3 class="click-open"><i class="open">+</i>Apple价值观</h3>
+                <div class="hide-link">
+                    <a href="">辅助功能</a>
+                    <a href="">环境责任</a>
+                    <a href="">隐私</a>
+                    <a href="">供应商责任</a>
+                </div>
+            </li>
+            <li class="list">
+                <h3 class="click-open"><i class="open">+</i>关于Apple</h3>
+                <div class="hide-link">
+                    <a href="">Apple咨询</a>
+                    <a href="">工作机会</a>
+                    <a href="">媒体资讯</a>
+                    <a href="">活动</a>
+                    <a href="">联系Apple</a>
+                </div>
+            </li>
+        </ul>
+        <div class="bot">
+            <p class="bot-text">更多选购方式：前往 <a href="#">Apple Store</a> 零售店，致电 400-666-8800 或查找在你附近的<a href="">授权经销商</a>。</p>
+            <div class="country">
+                <a href="#"><span></span>中国</a>
+            </div>
+            <p class="copy">Copyright © 2016 Apple Inc. 保留所有权利。</p>
+            <div class="bot-serve">
+                <a href="">隐私政策</a>
+                <a href="">使用条款</a>
+                <a href="">销售政策</a>
+                <a href="">法律信息</a>
+                <a href="">网站地图</a>
+            </div>
+        </div>
+        <p class="beian">京公安网安备 11010502008968 京ICP备10214630</p>
+    </div>
+</div>
+</body>
+<script src="jquery.js"></script>
+<script src="jquery.transit.js"></script>
+<script src="apple.js"></script>
+
+</html>

@@ -1,0 +1,20 @@
+    {template "content","myheader"}
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}sxylys/css/limai.css" />
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}sxylys/css/product_show.css" />
+    <!-- ************ 主体部分 ************* -->
+    <div class="list-main">
+    
+        <!-- 产品图文列表 -->
+        <h3 class="articel-title">{$title}</h3>
+        <div class="article-img">
+            <div class="img-box">
+                <img src="{$thumb}" alt="" />
+            </div>
+        </div>       
+        <div class="article">{$content}</div>
+        
+    </div><!-- *************** 主体部分结束 *********-->
+
+
+    {template "content","myfooter"}
+    <!-- <script type="text/javascript" src="{JS_PATH}sxylys/js/limei.js"></script> -->

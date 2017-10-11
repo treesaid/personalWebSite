@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url('../icon/iconfont.eot');
+    src: url('../icon/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../icon/iconfont.woff') format('woff'),
+    url('../icon/iconfont.ttf') format('truetype'),
+    url('../icon/iconfont.svg#iconfont') format('svg');
+}
+body{
+    background: #FAFAFA;
+    font-family:'microsoft yahei';
+}
+/*************** banner开始 ************/
+.xjn-banner{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+.xjn-banner img{
+    height: 100%;
+}
+/************* banner结束 *************/
+/***********校区查询开始***********/
+.xjn-container{
+    width: 1200px;
+    height: auto;
+    margin:0 auto;
+    margin-bottom:50px;
+}
+.xjn-container:after{
+    content:'';
+    display: block;
+    clear: both;
+}
+/****面包屑导航***/
+.xjn-container .xjn-nav{
+    width: 100%;
+    height:56px;
+    color: #666;
+    font-size: 18px;
+    line-height:56px;
+}
+.xjn-container  .xjn-nav .xjn-home{
+    /*margin-left: 28px;*/
+    color: #333;
+    margin-right: 9px;
+    transition:all 0.2s;
+}
+.xjn-nav .xjn-exper{
+    color: #01B5FF;
+    margin-left: 6px;
+}
+.xjn-container .xjn-nav a:hover{
+    color: #01B5FF;
+}/****面包屑导航***/
+.xjn-con{
+    width: 1198px;
+    height:auto;
+    padding-bottom:50px;
+    border: 1px solid #E1E1E1;
+    background: #fff;
+}
+.xjn-con .xjn-con-tit{
+    height: 80px;
+    width: 100%;
+    font-size: 26px;
+    line-height: 80px;
+    overflow: hidden;
+}
+.xjn-con .xjn-con-tit h3{
+    font-size:20px;
+    margin-left:30px;
+    float: left;
+    color: #000;
+    margin-right: 20px;
+}
+.xjn-con .xjn-con-tit span{
+    font-size: 20px;
+    float: left;
+    color:#01BDFF;
+}
+.xjn-con .xjn-con-tit h4{
+    font-size: 14px;
+    color: #999;
+    float: left;
+    margin-left: 20px;
+    /*line-height: 93px;*/
+}
+/********** 查询列表内容开始 **************/
+.xjn-search{
+    width: 1140px;
+    height: auto;
+    margin: 0 auto;
+    background:#fff;
+}
+.xjn-search:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+/*****左侧导航开始****/
+.xjn-search .xjn-lside{
+    width: 272px;
+    height: auto;
+    float: left;
+}
+.xjn-lside .xjn-list{
+    width: 272px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.xjn-lside .xjn-list a{
+    display: block;
+    width: 270px;
+    height: 48px;
+    border: 1px solid #CFD8DC;
+    font-size: 20px;
+    text-indent: 30px;
+    color: #000;
+    line-height: 50px;
+    position: relative;
+    transition: all 0.2s;
+    border-radius: 4px;
+}
+.xjn-lside .xjn-list .active{
+    background: #01B5FF;
+    color: #fff;
+    border: 1px solid #01B5FF;
+}
+.xjn-lside .xjn-list a span{
+    font-family:"iconfont";
+    font-size: 20px;
+    position: absolute;
+    right: 30px;
+    top:0;
+}
+.xjn-lside .xjn-list a:hover{
+    background: #01B5FF;
+    color: #fff;
+    border: 1px solid #01B5FF;
+}/*****左侧导航结束****/
+
+/********** 右侧地图开始 *********/
+#map{
+    float: left;
+    margin-left: 15px;
+    /*background:url('../images/xjn_img/xjn-map.png') no-repeat;*/
+}
+.xjn-container .xjn-content{
+    box-sizing: border-box;
+    float: left;
+    margin-left: 15px;
+    width: 850px;
+    height: auto;
+    font-size: 14px;
+    overflow: hidden;
+    background-color: red;
+    position:relative;
+    z-index:10;
+    background:#fff;
+    padding: 0 15px 30px 30px;
+}
+.xjn-container .xjn-content h1{
+    text-align:center;
+    font-size:26px;
+    line-height: 32px;
+    margin-bottom: 20px;
+}
+.xjn-container .xjn-content p{
+    font-size: 14px;
+    line-height: 22px;
+}
+.xjn-container .xjn-content {
+    line-height: 24px;
+}
+.xjn-content .bg-pic{
+    width:100%;
+    height:260px;
+    margin-bottom:20px;
+    background:url(../../../images/uek/images/xyz_img/about.png) no-repeat center 0;
+    background-size:100%;
+}

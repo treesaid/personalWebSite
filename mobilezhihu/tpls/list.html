@@ -1,0 +1,40 @@
+<div class="header">
+	<div class="header-list iconfont" block>&#xe619;</div>
+	<div class="header-home iconfont">首页</div>
+	<di class="header-more iconfont"  ng-click="set()">&#xe793;</di>
+	<a href="#/new" class="header-more iconfont">&#xe65a;</a>
+	<div class="setting" ng-show="setFlag">
+		<div class="set-inner">夜间模式</div>
+		<div class="set-inner">设置选项</div>
+	</div>
+</div>
+<div class="trans" ng-click="lose()" ng-show="setFlag"></div>
+<div class="content-outer">
+	<div class="swiper-container" swiper>
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" ng-repeat="r in tops">
+				<a href="#/show/{{r.id}}">
+				    <img src="{{r.image}}" alt="">
+			    </a>
+			    <div class="image-title">{{r.title}}</div>
+		    </div>
+		</div>
+		<!-- 如果需要分页器 -->
+		<div class="swiper-pagination"></div>
+   </div>
+   <section>
+   	     <div class="content-header">今日新闻</div>
+		  <div class="content-inner">
+		  	<ul class="box-outer">
+				<li class="box" ng-repeat="v in list">
+					<a href="#/show/{{v.id}}">
+						<div class="img"><img src="{{v.images[0]||'images/top_logo.png'}}" alt=""></div>
+						<span>{{v.title}}</span>
+					</a>
+				</li>
+			</ul>
+		 </div>
+	</section>
+	<footer></footer>
+ </div>
+

@@ -1,0 +1,13 @@
+<div class="header">
+	<a class="header-icon header-back iconfont" href="#/">&#xe697;</a>
+	<div class="header-fen iconfont">70条点评</div>
+</div>
+<div class="content-outer">
+	<div class="comment-item" ng-repeat='v in com'>
+		<div class="comment-top">
+			<div class="comment-user" style="background:url({{v.avatar}}) center center/cover" ></div>
+			<div class="user-name">{{v.author}}</div>
+		</div>
+		<div class="comment-bottom">{{v.content}}</div>
+	</div>
+</div>

@@ -1,0 +1,64 @@
+
+{template "content","uek_nav"}
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/ly_gxxy.css" />
+<link rel="stylesheet" href="{CSS_PATH}uek/css/ld_pages.css">
+{template "content","uek_inside_banner"}
+
+     
+<!--***************内容*****************-->
+    <div class="ly-container">
+    <!-- ***********面包屑导航************* -->
+        <div class="ly-navagation-box">
+            <ul class="ly-navnavagation">
+                <li class="ly-con"><a href="{siteurl($siteid)}">首页</a></li>
+                <li class="ly-con"><span>&gt;</span></li>
+                <li class="ly-con ly-con-active"><a href="javascript:">{$CATEGORYS[$top_parentid][catname]}</a></li>
+            </ul>
+        </div>
+  {template "content","side_ly_nav"}
+    <!-- ***********右侧内容区  con************* -->
+        <div class="ly-right-box">
+            <!-- 头部-->
+            <div class="ly-right-head">
+                <h1 class="ly-right-head-left">
+                    <a href="javascript:;">精英学子展示</a>
+                </h1>
+            </div>
+            <!-- 下方列表-->
+            <!-- UI -->
+            {php $str = $arrchildid}
+            {php $arr = explode(",", $str)}
+            {php $str2 = $CATEGORYS[$arr[0]][arrchildid]}     
+            {php $brr = explode(',',$str2)}
+            <!-- {$brr[1]} -->
+            {php $catid = $brr[1]}
+            {pc:content action="lists" catid="$catid" moreinfo="1" page="$page" num="9"}
+            <ul class="ly-right-con-box">
+            <!-- {php var_dump($catid)} -->
+                {php $ld=$catid}
+                {loop $data $r}
+                <li data-catid="{$ld}" class="ly-right-con ld-usepage">
+                    <!-- 头像-->
+                    <a href="{$r[url]}" class="ly-right-con-photo"><img src="{$r[thumb]}" alt=""/></a>
+                    <!-- 信息-->
+                   <div class="ly-info">
+                        <h1 class="ly-name"><a href="j{$r[url]}">{$r[name]}</a></h1>
+                        <h2 class="ly-job"><a href="{$r[url]}">{$r[school]}</a></h2>
+                        <div class="ly-salary"><strong>艺考成绩&nbsp;{$r[grade]}&nbsp;</strong></div>
+                    </div>
+                </li>
+                {/loop}
+            </ul>
+        </div>
+    </div><!--***************结束*****************-->
+
+<!--***************翻页开始****************-->
+<div class="ly-page-box clearfix">
+<div class="ly-page">
+     {template "content","uek_pages"}
+    {/pc}
+</div>
+</div><!--翻页结束-->
+{template "content","uek_footer"}
+<script type="text/javascript" src="{JS_PATH}uek/js/ly_gxxy.js"></script>
+<script src="{JS_PATH}uek/js/ld_pages.js"></script>

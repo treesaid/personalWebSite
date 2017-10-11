@@ -1,0 +1,51 @@
+
+{template "content","uek_nav"}
+{template "content","uek_inside_banner"}
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/xjn_xwzx.css" />
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/xyz_footer_wzdt.css" />
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/ljg_gywm.css" />
+
+    <div class="xjn-container">
+        <!-- ************* 内页公共样式左边开始 ******************** -->
+        <!-- 面包屑导航开始 -->
+        <div class="xjn-mbxnav">
+            <a href="{siteurl($siteid)}" class='xjn-home'>首页</a>
+            <span>&gt;</span>
+            <a href="javascript:;" class='xjn-category'>网站地图</a>
+        </div> <!-- 面包屑导航结束 -->
+  
+        <div class="xjn-content">
+            {template "content","side_footer_nav_wzdt"}
+             <!-- **********  新闻资讯内容右侧开始 ************** -->
+             <div class="xjn-newcon">
+                <h3 class="xjn-newstitle">{$CATEGORYS[$catid][catname]}</h3>
+                <!--**** 右侧内容开始 ******-->
+                <div class="xjn-content">
+                    {pc:content action="category" catid="0" num="250" siteid="$siteid" order="listorder ASC"}
+                        <div class="items">
+                            <h2><a href="{siteurl($siteid)}">星起点</a>:</h2>
+                        </div>
+                        {loop $data $r}
+                        <div class="items">
+                            <h2><a href="{$r[url]}">{$r[catname]}</a>:</h2>
+                            {if $r[child]}
+                                {pc:content action="category" catid="$r[catid]" num="150" siteid="$siteid" order="listorder ASC"}
+                                    {loop $data $t}
+                                        <dl class="left">
+                                        <dt><a href="{$t[url]}">{$t[catname]}</a></dt>
+                                            
+                                        </dl>
+                                    {/loop}
+                                {/pc}
+                            {/if}
+                        </div>
+                        {/loop}
+                    {/pc}
+                </div>
+              </div>
+        </div>
+    </div> 
+{template "content","uek_footer"}
+</body>
+<script src="{JS_PATH}uek/js/xjn_xwzx.js"></script>
+</html>

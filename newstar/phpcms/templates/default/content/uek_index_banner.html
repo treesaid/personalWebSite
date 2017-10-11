@@ -1,0 +1,28 @@
+<!-- **************************  banner ***************************  -->
+        <div class="ljg-banner-container">
+            {pc:content action="lists" catid="76" moreinfo="1"}
+            <div class="ljg-banner-inner">
+                <!-- 图片 -->
+                <ul class="ljg-banner-ul">
+                    {php $i=0}
+                    {loop $data $v}
+                        <li class="ljg-banner-lis{if $i==0} ljg-banner-lis-active{/if}">
+                            <a href="javascript:;"><img data-src="{$v[carousel]}"/></a>
+                        </li>
+                    {php $i++}
+                    {/loop}
+                </ul>
+            
+                <!-- 滑动切换 -->
+                <div class="ljg-banner-slide">
+                    <ul>
+                        {php $i=0}
+                        {loop $data $v}
+                            <li class="ljg-slide-lis{if $i==0} active{/if}"></li>
+                        {php $i++}
+                        {/loop}
+                    </ul>
+                </div>
+            </div><!-- inner结束 -->
+            {/pc}
+        </div><!-- banner结束 -->

@@ -1,0 +1,29 @@
+{template "content","myheader"}
+<link rel="stylesheet" href="{CSS_PATH}mycss/news.css">
+	<!-- banner -->
+	<div class="banner">
+		<img src="{IMG_PATH}img/bannerpic.jpg" alt="">
+	</div>
+	<!-- 品牌介绍 -->
+	<div class="intro">
+		{template "content","slide"}
+		<div class="intro-right">
+			<div class="title">
+				<p class="intro-p">新闻动态<span>NEWS</span></p>
+				<div class="weizhi">
+					<a href="">首页</a>
+					<span>&gt; 品牌介绍</span>
+				</div>
+			</div>
+			<div class="art">
+				{pc:content action="lists" catid="$catid" num="10" page="$page" order="id ASC" morrinfo="1"}
+				{loop $data $r}
+				<!-- {php var_dump($data)} -->
+				<p><a href="{$r[url]}"><!-- 雪地靴保养说明 -->{$r[title]}</a><span>{$r[description]}</span></p>
+				{/loop}
+				{/pc}
+				<div class="xian"></div>
+			</div>
+		</div>
+	</div>
+	{template "content","myfooter"}

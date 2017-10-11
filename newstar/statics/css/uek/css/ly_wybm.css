@@ -1,0 +1,203 @@
+body{
+    background-color:#fafafa;
+}
+/***********************我要报名***************************/
+
+.ly-sigin-container{
+    box-sizing:border-box;
+    width:1200px;
+    background-color:#FFFFFF;
+    padding:30px;
+    margin:30px auto;
+    border:1px solid #e8e8e8;
+}
+/*********标题*********/
+.ly-sigin-title{
+    width:100%;
+    height:25px;
+    font-size:26px;
+    margin-bottom:30px;
+}
+/*******友情提示*******/
+.ly-sigin-yqts{
+    height:12px;
+    font-size:12px;
+    color:#999999;
+    margin-bottom:30px;
+}
+/*******填写基本信息*******/
+.ly-sigin-info-box{
+    width:1140px;
+    background-color: #F3F3F3;
+    padding:0 30px;
+    padding-top:20px;
+    box-sizing:border-box;
+    margin-bottom:60px;
+}
+/*标题*/
+.ly-sigin-info-title{
+    height:40px;
+    font-size:20px;
+    color:#666666;
+    line-height:40px;
+    border-bottom:1px solid #BFBFBF;
+}
+/*表单*/
+.ly-sigin-info-form{
+    width:100%;
+    padding-top:43px;
+}
+/*输入框*/
+.ly-sigin-info-lis{
+    float:left;
+    width:50%;
+    height:36px;
+    margin:15px 0;
+}
+.ly-sigin-info-right{
+    box-sizing:border-box;
+    padding-left:55px;
+}
+.ly-sigin-info-lis span{
+    float:left;
+    height:36px;
+    line-height:36px;
+    font-size:16px;
+    color:#000000;
+}
+.ly-sigin-info-lis i{
+    font-style: normal;
+    float:left;
+    width:16px;
+    height:24px;
+    padding-top:12px;
+    text-align: center;
+    font-size:16px;
+    color:#00B4FF;
+}
+.ly-sigin-info-lis-active i{
+    color:#00B4FF;
+}
+.ly-sigin-info-lis input{
+    box-sizing:border-box;
+    float:left;
+    width:400px;
+    height:36px;
+    border:1px solid #C9C9C9;
+    color:#333;
+    font-size:16px;
+    padding:9px 13px;
+    outline:none;
+}
+#ly-sigin-btn{
+    width:180px;
+    height:46px;
+    border:none;
+    background-color: #01B5FF;
+    font-size:16px;
+    color:#FFF;
+    border-radius:8px;
+    margin:30px auto;
+    position:relative;
+    left:50%;
+    margin-left:-90px;
+    outline:none;
+    cursor:pointer;
+}
+#ly-sigin-btn:hover{
+    background-color: #0095FF;
+}
+/************预交报名费*************/
+.ly-yjbmf-box{
+    width:1140px;
+    padding:0 30px;
+    box-sizing:border-box;
+    margin-bottom:60px;
+}
+.ly-con-bd{
+    padding-bottom:50px;
+    border-bottom:1px dotted #A9A9A9;
+}
+/*标题*/
+.ljg-content-title{
+    padding-bottom:18px;
+}
+.ljg-content-title strong{
+    font-size:20px;
+    color:#000;
+}
+.ljg-content-title b{
+    font-size:20px;
+    color:#01B5FF;
+    margin:0 10px;
+}
+.ljg-content-title span{
+    font-size:14px;
+    color:#999;
+    text-transform: uppercase;
+}
+/*内容*/
+.ly-yjbmf-con h1{
+    width:100%;
+    font-size:14px;
+    color:#333333;
+    font-weight:bold;
+    height:28px;
+    line-height: 28px;
+}
+.ly-yjbmf-con span{
+    font-size:14px;
+    color:#333333;
+    font-weight:normal;
+}
+.ly-yjbmf-con p{
+    width:100%;
+    font-size:12px;
+    color:#666666;
+    padding:6px 0;
+    line-height:20px;
+}
+/************报名费确认*************/
+/*内容*/
+.ly-bmfqr-title{
+    height:28px;
+    line-height:28px;
+    color:#333;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+.ly-bmfqr-ul{
+
+}
+.ly-bmfqr-ul dt{
+    font-size:16px;
+    color:#00B4FF;
+    height:36px;
+    line-height:36px;
+}
+.ly-bmfqr-ul dd{
+    padding-left:16px;
+    font-size:14px;
+    color:#333;
+    height:24px;
+    line-height:24px;
+    position:relative;
+}
+.ly-bmfqr-ul dd span{
+    position:absolute;
+    font-size:60px;
+    color:#999;
+    left:0;
+    top:-2px;
+}
+/***********来校报道*************/
+.ly-lxbd-con ul{
+    font-size:14px;
+    color:#333;
+    padding:5px 0;
+}
+.ly-lxbd-con ul li{
+    height:28px;
+    line-height:28px;
+}

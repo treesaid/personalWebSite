@@ -1,0 +1,102 @@
+{template "content","myheader"}
+<!-- banner -->
+	<div class="banner">
+		<div class="screen">
+			<ul class="ulimg">
+				
+				{pc:content action="lists" num="3" catid="20" order="listorder ASC"}
+				{php $i=0}
+				{loop $data $r}
+				{if $i==0}
+				<img src="{$r[banner]}" alt="" class="imglis first-img">
+				{php $i++}
+				{else}<img src="{$r[banner]}" alt="" class="imglis">
+				{/if}
+				<!-- <img src="{IMG_PATH}img/20131224113522.jpg" alt="" class="imglis"> -->
+				{/loop}
+				{/pc}
+			</ul>
+			<div class="cir-box">
+				<ul class="ulcir">
+					<li class="cir first-cir"></li>
+					<li class="cir"></li>
+					<li class="cir"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- 品牌展示 -->
+	<div class="show">
+		<div class="intro">
+			<div class="show-box">
+				<a href="{$CATEGORYS[9][url]}" class="showa">
+					<img src="{IMG_PATH}img/inpic1.jpg" alt="" class="show-pic">
+					<img src="{IMG_PATH}img/show1.jpg" alt="" class="hshow-pic">
+				</a>
+				<a href="{$CATEGORYS[11][url]}" class="showa">
+					<img src="{IMG_PATH}img/9k=.jpg" alt="" class="show-pic">
+					<img src="{IMG_PATH}img/show2.jpg" alt="" class="hshow-pic">
+				</a>
+				<a href="{$CATEGORYS[14][url]}" class="showa">
+					<img src="{IMG_PATH}img/inpic3.png" alt="" class="show-pic">
+					<img src="{IMG_PATH}img/show3.png" alt="" class="hshow-pic">
+				</a>
+			</div>
+		</div>
+	</div>
+	<style>
+		.box{
+			width: 100%;
+			height: 200px;
+			background: #1A1A1A;
+		}
+		.news-dt{
+			width:520px;height:200px;background:#202020;
+			margin-left: 166px;
+		}
+		.news-dt p{
+			width:480px;height:30px;background:#F3640E;
+			font-size: 16px;
+			line-height: 30px;
+			padding-left: 20px;
+			color: #666;
+			font-family: "微软雅黑";
+		}
+		.news-dt ul{
+			width: 100%;
+			height: 170px;
+		}
+		.news-dt ul li{
+			width:500px;
+			padding-left: 20px;
+			height: 30px;
+			border-bottom: 1px solid #999999;
+			list-style-type:disc;
+			list-style-position: inside;
+			color: #fff;
+			font-size: 16px;
+		}
+		.news-dt ul li a{
+			font-size: 12px;
+			color: #B2B1B1;
+			line-height: 30px;
+			font-weight: bold;
+		}
+		.news-dt ul li a:hover{
+			color: red;
+		}
+	</style>
+	<!-- 推荐位 -->
+	<div class="box">
+		<div class="news-dt">
+		<p style="width:500px;height:30px;background:lightblue;font-size">~首页新闻动态</p>
+		<ul>
+			{pc:content action="position" posid="18" num="5" order="listorder ASC"}
+			{loop $data $c}
+			<li><a href="{$c[url]}">{$c[title]}</a></li>
+			{/loop}
+			{/pc}	
+		</ul>
+	</div>
+	</div>
+{template "content","myfooter"}

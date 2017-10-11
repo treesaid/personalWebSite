@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <script src="function.js"></script>
+    <script src="animate.js"></script>
+    <link rel="stylesheet" href="reset.css">
+</head>
+<style>
+body {
+      background: #222;
+      background: radial-gradient(#333, #111);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #fff;
+      font: 100%/1.5 sans-serif;
+      overflow: hidden;
+    }
+ .box{
+    width:600px;
+    height: 600px;
+    border:1px solid #999;
+    margin:0 auto;
+
+}
+    .box div{
+        width:28px;
+        height: 28px;
+        border:1px solid #999;
+        float:left;
+    }
+    .she{
+        background: red;
+    }
+    .shiwu{
+        background: #fff;
+    }
+</style>
+<script>
+  $(function(){
+      var box=$(".box")[0];
+      for(var i=0;i<20;i++){
+          for(var j=0;j<20;j++){
+              var obj=$("<div>");
+              obj.id=i+"-"+j;
+              box.appendChild(obj);
+          }
+      }
+      var she=[{x:0,y:0},{x:0,y:1},{x:0,y:2}];
+      for(var i=0;i<she.length;i++){
+          var obj=$("#"+she[i].x+"-"+she[i].y);
+          obj.className="she";
+      }
+      function puanduan(a,b){
+          for(var i=0;i<she.length;i++){
+              if(she[i].x==a&&she[i].y==b){
+                  return true;
+              }
+          }
+          return false;
+      }
+      function shiwu(){
+          do{
+              var x=Math.floor(Math.random()*20);
+              var y=Math.floor(Math.random()*20);
+          }
+          while(puanduan(x,y));
+          var shiwu=$("#"+x+"-"+y);
+          shiwu.className="shiwu";
+          return {x:x,y:y}
+      }
+      var shiwu1=shiwu();
+      var fangxiang="you";
+      function move(){
+          if(fangxiang=="you"){
+              var xinshetou=$("#"+she[she.length-1].x+"-"+(she[she.length-1].y+1));
+              if(xinshetou==undefined||puanduan(she[she.length-1].x,(she[she.length-1].y+1))){
+                  alert("gameover");
+                  clearInterval(t);
+              }
+              xinshetou.className="she";
+              she.push({x:she[she.length-1].x,y:(she[she.length-1].y+1)});
+//              var shewei=$("#"+she[0].x+"-"+she[0].y);
+//              shewei.className="";
+//              she.shift();
+          }else if(fangxiang=="zuo"){
+              var xinshetou=$("#"+she[she.length-1].x+"-"+(she[she.length-1].y-1));
+              if(xinshetou==undefined||puanduan(she[she.length-1].x,(she[she.length-1].y-1))){
+                  alert("gameover");
+                  clearInterval(t);
+              }
+              xinshetou.className="she";
+              she.push({x:she[she.length-1].x,y:(she[she.length-1].y-1)});
+//              var shewei=$("#"+she[0].x+"-"+she[0].y);
+//              shewei.className="";
+//              she.shift();
+          }else if(fangxiang=="shang"){
+              var xinshetou=$("#"+(she[she.length-1].x-1)+"-"+(she[she.length-1].y));
+              if(xinshetou==undefined||puanduan((she[she.length-1].x-1),she[she.length-1].y)){
+                  alert("gameover");
+                  clearInterval(t);
+              }
+              xinshetou.className="she";
+              she.push({x:(she[she.length-1].x-1),y:(she[she.length-1].y)});
+//              var shewei=$("#"+she[0].x+"-"+she[0].y);
+//              shewei.className="";
+//              she.shift();
+          }else if(fangxiang=="xia"){
+              var xinshetou=$("#"+(she[she.length-1].x+1)+"-"+(she[she.length-1].y));
+              if(xinshetou==undefined||puanduan((she[she.length-1].x+1),she[she.length-1].y)){
+                  alert("gameover");
+                  clearInterval(t);
+              }
+              xinshetou.className="she";
+              she.push({x:(she[she.length-1].x+1),y:(she[she.length-1].y)});
+//              var shewei=$("#"+she[0].x+"-"+she[0].y);
+//              shewei.className="";
+//              she.shift();
+          }
+          if(xinshetou==$("#"+shiwu1.x+"-"+shiwu1.y)){
+              shiwu1=shiwu();
+          }else{
+              var shewei=$("#"+she[0].x+"-"+she[0].y);
+              shewei.className="";
+              she.shift();
+          }
+
+      }
+      var t=setInterval(move,100);
+       document.onkeydown=function(e){
+           var ev=e||window.event;
+           if(ev.keyCode=="37"){
+               if(fangxiang=="you"){
+                   return;
+               }
+               fangxiang="zuo";
+           }else if(ev.keyCode=="38"){
+                   if(fangxiang=="xia"){
+                   return;
+               }
+               fangxiang="shang";
+           }
+           else if(ev.keyCode=="39"){
+               if(fangxiang=="zuo"){
+                   return;
+               }
+               fangxiang="you";
+           }else if(ev.keyCode=="40"){
+               if(fangxiang=="shang"){
+                   return;
+               }
+               fangxiang="xia";
+           }
+       }
+  })
+</script>
+<body>
+ <div class="box"></div>
+</body>
+</html>

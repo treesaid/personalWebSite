@@ -1,0 +1,190 @@
+/* 
+* @Author: Marte
+* @Date:   2016-11-19 09:47:00
+* @Last Modified by:   Marte
+* @Last Modified time: 2016-11-19 17:43:42
+*/
+/**************科学实训***************/
+.lyn-science{
+    width:1200px;
+    height:880px;
+    margin:0 auto;
+    margin-top:70px;
+}
+.lyn-science-title{
+    width:1200px;
+    height:55px;
+    font-size:36px;
+    color:#00ADFA;
+    line-height:55px;
+    text-align:center;
+}
+.lyn-science-smalltitle{
+    width:1200px;
+    text-align:center;
+    font-size:16px;
+    color:#222;
+}
+.lyn-science-line{
+    width:21px;
+    height:2px;
+    background:#00B0FF;
+    margin:17px 0 0 590px;
+}
+.lyn-science-contain{
+    width:1200px;
+    height:792px;
+}
+.lyn-science-contains{
+    width:1200px;
+    height:742px;
+    margin-top:50px;
+}
+.lyn-science-lis{
+    float:left;
+    width:380px;
+    height:594px;
+    padding-top:15px;
+    margin-right:30px;
+    background:url(../images/lyn_images/lyn-science-bg.png) no-repeat;
+    box-shadow:0 0 25px rgba(0,0,0,0.2);
+    behavior:url(css/PIE/PIE.htc);
+}
+.lyn-science-circle{
+    width:89px;
+    height:89px;
+    margin:0px auto;
+    border-radius:50%;
+}
+.lyn-science-circle1{
+    background:url(../images/lyn_images/lyn-science-apple.png) #fff center center no-repeat;
+    background-size:80% 80%;
+}
+.lyn-science-circle2{
+    background:url(../images/lyn_images/lyn-science-html5.png) #fff center center no-repeat;
+    background-size:80% 80%;
+}
+.lyn-science-circle3{
+    background:url(../images/lyn_images/lyn-science-command.png) #fff center center no-repeat;
+    background-size:80% 80%;
+}
+.lyn-science-listitle{
+    width:100%;
+    font-size:26px;
+    line-height:44px;
+    text-align:center;
+    color:#000;
+    font-weight:500;
+}
+.lyn-science-threelis{
+    width:315px;
+    height:89px;
+    padding:28px 0 0 65px;
+}
+.lyn-science-threelists{
+    float:left;
+    padding:6px 20px;
+    font-size:14px;
+    border:1px solid #01B5FF;
+    border-radius:20px;
+    margin:0 20px 14px 0;
+}
+.lyn-science-threelists a{
+    color:#666;
+}
+li.lyn-science-three{
+    margin-left:34px;
+}
+.lyn-science-middle{
+    width:100%;
+    height:205px;
+    padding-top:33px;
+}
+.lyn-science-middle-title{
+    width:100%;
+    font-size:20px;
+    color:#000;
+    text-align:center;
+}
+.lyn-science-middle-contain{
+    width:280px;
+    height:137px;
+    padding:25px 50px;
+}
+.lyn-science-per{
+    float:left;
+    width:137px;
+    height:137px;
+}
+.lyn-science-contain-right{
+    width:143px;
+    height:137px;
+    float:left;
+}
+.lyn-science-contain-right li{
+    width:143px;
+    height:40px;
+    margin-bottom:14px;
+}
+.lyn-science-kuai{
+    float:right;
+    width:7px;
+    height:7px;
+    margin:13px 12px 20px 0;
+    background:url(../images/lyn_images/lyn-science-kuai.jpg) no-repeat;
+}
+.lyn-science-contain-right li h5{
+    float:right;
+    font-size:14px;
+    color:#000;
+    line-height:25px;
+    padding-right:12px;
+}
+.lyn-science-contain-right li h6{
+    float:right;
+    font-size:12px;
+    color:#999;
+    line-height:15px;
+    padding-right:10px;
+}
+.lyn-science-bottom{
+    width:100%;
+    height:82px;
+    padding-top:25px;
+}
+.lyn-science-bottom p{
+    width:100%;
+    line-height:25px;
+    font-size:12px;
+    color:#000;
+    text-align:center;
+}
+.lyn-science-button{
+    display:block;
+    width:208px;
+    height:53px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    background:#00B5FF;
+    font-size:22px;
+    color:#fff;
+    margin:0 auto;
+    margin-top:-1px;
+    text-align:center;
+    line-height:50px;
+}
+.lyn-science-button:hover{
+    background:#2691FD;
+}
+.lyn-science-last{
+    margin-right:0;
+}
+/**************科学实训结束****************/
+
+/***************师资团队******************/
+.lyn-team{
+    width:1200px;
+    height:535px;background:pink;
+    margin:0 auto;
+    margin-top:-58px;
+}

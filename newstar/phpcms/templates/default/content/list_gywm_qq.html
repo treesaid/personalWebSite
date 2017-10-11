@@ -1,0 +1,136 @@
+{template "content","uek_nav"}
+{template "content","uek_inside_banner"}
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/xjn_xwzx.css" />
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/ljg_gywm.css" />
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/xjn_qqhd.css" />
+
+    <div class="xjn-container">
+        <!-- ************* 内页公共样式左边开始 ******************** -->
+        <!-- 面包屑导航开始 -->
+        <div class="xjn-mbxnav">
+            <a href="{siteurl($siteid)}" class='xjn-home'>首页</a>
+            <span>&gt;</span>
+            <a href="javascript:;" class='xjn-category'>{$CATEGORYS[71][catname]}</a>
+            <!-- <span>&gt;</span> -->
+            <!-- <a href="javascript:;" class='xjn-category'>{$CATEGORYS[$catid][catname]}</a> -->
+        </div><!-- 面包屑导航结束 -->
+  
+        <div class="xjn-content">
+            {template "content","side_gywm_nav_2"}
+            <div class="xjn-newcon">
+                <h3 class="xjn-newstitle">QQ互动交流平台</h3>
+                <!--**** 右侧内容开始 ******-->
+                <div class="xjn-content">
+                    <!-- 欢迎词 -->
+                    <div class="xjn-intro">
+                        <div class="xjn-rlogo">
+                            <img src="{IMG_PATH}uek/images/xjn_img/xjn-rlogo.png"  alt="" />
+                        </div>
+                        <p class="xjn-join">
+                                Hello，大家好，这里是星起点的QQ号!一直以来我们与学员保持着亦师亦友的高逼格情谊，甘心做学员和入学之间的桥梁! QQ:0123456789<br /> 
+            在这里能遇到志同道合的朋友；尽享畅通交流；看到各种大牛......
+                            </p>
+                    </div>
+                    <!-- 一键加群开始 -->
+                    <ul class="xjn-onekey">
+                        <li class="xjn-item">
+                            <div class="xjn-icon xjn-icon1">   
+                            </div>
+                            <p>影视表演</p>
+                            <!-- 此处更换QQ群地址 -->
+                            {pc:content action="lists" catid="74" moreinfo="1"}
+                            {php $i=0}
+                            {loop $data $v}
+                            {if $i==0}
+                            <a  target="_blank" href="{$v[myurl]}" class="xjn-btn">一键加群</a>
+                            {/if}
+                            {php $i++}
+                            {/loop}
+                            {/pc}
+                        </li>
+                        <li class="xjn-item">
+                             <div class="xjn-icon xjn-icon2">
+                            </div>
+                            <p>摄影摄像</p>
+                            <!-- 此处更换QQ群地址 -->
+                            {pc:content action="lists" catid="74" moreinfo="1"}
+                            {php $i=0}
+                            {loop $data $v}
+                            {if $i==1}
+                            <a  target="_blank" href="{$v[myurl]}" class="xjn-btn">一键加群</a>
+                            {/if}
+                            {php $i++}
+                            {/loop}
+                            {/pc}
+                        </li>
+                        <li class="xjn-item">
+                             <div class="xjn-icon xjn-icon3">  
+                            </div>
+                            <p>美术设计</p>
+                            <!-- 此处更换QQ群地址 -->
+                            {pc:content action="lists" catid="74" moreinfo="1"}
+                            {php $i=0}
+                            {loop $data $v}
+                            {if $i==2}
+                            <a  target="_blank" href="{$v[myurl]}" class="xjn-btn">一键加群</a>
+                            {/if}
+                            {php $i++}
+                            {/loop}
+                            {/pc}
+                        </li>
+                        <li class="xjn-item xjn-lastitem">
+                             <div class="xjn-icon xjn-icon4">  
+                            </div>
+                            <p>免费学习</p>
+                            <!-- 此处更换QQ群地址 -->
+                            {pc:content action="lists" catid="74" moreinfo="1"}
+                            {php $i=0}
+                            {loop $data $v}
+                            {if $i==3}
+                            <a  target="_blank" href="{$v[myurl]}" class="xjn-btn">一键加群</a>
+                            {/if}
+                            {php $i++}
+                            {/loop}
+                            {/pc}
+                        </li>
+                    </ul><!-- 一键加群结束 -->
+                    <h3 class="xjn-title">入伙优势</h3>
+                    <!-- 入伙优势开始 -->
+                    <ul class="xjn-rhys">
+                        <li class="xjn-rhys-list">
+                            <div class="xjn-cir">01</div>
+                            <div class="xjn-text">
+                                <h3>答疑解惑</h3>
+                                <p>对星起点有任何问题我们可以及时解决</p>
+                            </div>
+                        </li>
+                        <li class="xjn-rhys-list">
+                            <div class="xjn-cir">02</div>
+                            <div class="xjn-text">
+                                <h3>精神食粮</h3>
+                                <p>分享各种课程干货与设计干活</p>
+                            </div>
+                        </li>
+                        <li class="xjn-rhys-list">
+                            <div class="xjn-cir">03</div>
+                            <div class="xjn-text">
+                                <h3>活动优惠</h3>
+                                <p>优先享受各种免费体验课</p>
+                            </div>
+                        </li>
+                        <li class="xjn-rhys-list">
+                            <div class="xjn-cir">04</div>
+                            <div class="xjn-text">
+                                <h3>闲聊逗趣</h3>
+                                <p>哦尔逗比，扯淡，快来加入我吧！</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>  
+{template "content","uek_footer"}
+</body>
+<script src="{JS_PATH}uek/js/xjn_xwzx.js"></script>
+</html>

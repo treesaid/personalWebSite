@@ -1,0 +1,48 @@
+{template "content","uek_nav"}
+{template "content","uek_inside_banner"} 
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/xjn_xqcx.css" />
+
+    <!-- ******校区查询开始 *********** -->
+    {pc:get sql="SELECT * FROM v9_page where catid=83"}
+    {loop $data $v}
+    <div class="xjn-container">
+        <!--面包屑导航开始-->
+            <div class="xjn-nav">
+                <a href="{siteurl($siteid)}" class="xjn-home">首页</a><span>&gt;</span><a href="javascript:;" class="xjn-exper">{$title}</a>
+            </div><!--面包屑导航结束-->
+
+        <!--************ 校区查询内容开始 **********-->
+        <div class="xjn-con clearfix">
+            <!--标题-->
+            <div class="xjn-con-tit">
+                <h3>{$title}</h3>
+                <span>|</span>
+                <h4>Company profile</h4>
+            </div>
+
+        {template "content","page_footer_side_2"}
+
+                <!--**** 右侧内容开始 ******-->
+                <div class="xjn-content">
+                    <div class="bg-pic"></div>
+                    {$content}
+                </div>
+            </div>
+        </div>
+    </div>
+    {/loop}
+    {/pc}
+
+{template "content","uek_footer"}
+
+<script>
+    $('.xjn-item').click(function () {
+        $('.xjn-item').removeClass('active');
+        $(this).addClass('active');
+    })
+</script>
+
+</html>
+
+
+

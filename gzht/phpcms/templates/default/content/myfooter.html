@@ -1,0 +1,26 @@
+	<!-- footer -->
+	<div class="footer">
+		<div class="foot">
+			<img src="{IMG_PATH}img/20131224033743_76840.jpg" alt="" class="erweima">
+			<img src="{IMG_PATH}img/20131224033546_71751.jpg" alt="" class="erweima">
+			<div class="footcon">
+				<p class="pp1">
+					<a href="#">首页</a><span>|</span>
+					<a href="inpage/about.html">品牌介绍</a><span>|</span>
+					<a href="inpage/news.html">新闻动态</a><span>|</span>
+					<a href="inpage/product.html">产品展示</a><span>|</span>
+					<a href="inpage/service.html">服务专区</a><span>|</span>
+					<a href="inpage/message.html">在线留言</a><span>|</span>
+					<a href="inpage/contact.html">联系方式</a>
+				</p>
+				{pc:content action="lists" catid="19" num="1"}
+				{loop $data $i}
+				<p class="pp2">版权所有：{$i[copyright]} 备案号：晋ICP备*****号 手机：{$i[telephone]}  固话：{$i[phone]}</p>
+				{/loop}
+				{/pc}
+			</div>
+			<img src="{IMG_PATH}img/20131224055204_55041.png" alt="" id="foot-logo">
+		</div>
+	</div>
+</body>
+</html>

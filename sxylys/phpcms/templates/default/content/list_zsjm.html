@@ -1,0 +1,32 @@
+    {template "content","myheader"}
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}sxylys/css/limai.css" />
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}sxylys/css/product_show.css" />
+    <!-- ************ 主体部分 ************* -->
+    <div class="list-main">
+        <div class="lm-nav">
+            <a href="{$CATEGORYS[9][url]}" class="lm-product">关于藜麦</a>
+            <div class="lm-line"></div>
+            <div class="more">
+                <!-- <div class="more-icon"></div> -->
+                <a href="{siteurl($siteid)}">返回</a>
+
+            </div>
+        </div>
+        <!-- 产品图文列表 -->
+        <!-- <h3 class="articel-title">{$title}</h3>
+        <div class="article-img">
+            <div class="img-box">
+                <img src="{$thumb}" alt="" />
+            </div>
+        </div> -->       
+        {pc:content  action="lists" catid="$catid" num="1" siteid="$siteid" order="listorder ASC" moreinfo="1"}
+        {loop $data $v}
+        <div class="article">{$v[content]}</div>
+        {/loop}
+        {/pc}
+
+    </div><!-- *************** 主体部分结束 *********-->
+
+
+    {template "content","myfooter"}
+    <!-- <script type="text/javascript" src="{JS_PATH}sxylys/js/limei.js"></script> -->

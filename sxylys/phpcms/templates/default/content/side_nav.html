@@ -1,0 +1,13 @@
+    
+    <!-- 产品列表 -->
+    <ul class="product-list">
+        {pc:content  action="category" catid="$catid" num="10" siteid="$siteid" order="listorder ASC"}
+        {loop $data $v}
+        <!-- {php var_dump($data)} -->
+        <li><a href="{$v[url]}">{$v[catname]}</a></li>
+        {/loop}
+        {/pc}
+        <!-- <li><a href="#">藜麦</a></li>
+        <li><a href="#">藜麦粉</a></li>
+        <li><a href="#">藜麦茶</a></li> -->
+    </ul>

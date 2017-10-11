@@ -1,0 +1,47 @@
+/* **********php课程安排************ */
+.ld-lcright-di{
+    width:793px;
+    padding-left:43px;
+}
+.ld-kcdi{
+    height:639px;
+}
+.ld-lcright{
+    width:787px;
+}
+/*处理多行、单行文本垂直居中*/
+.ld-lcright p{
+    width:auto;
+}
+
+/*课程安排左侧标题*/
+.ld-left-tit{
+    width:373px;
+    left:-413px;
+}
+.ld-left-tit4 .ld-tit-num{
+    background-position:-78px -32px;
+}
+.ld-left-tit5 .ld-tit-num{
+    background-position:-154px -32px;
+}
+.ld-tit-num{
+    float:right;
+    margin:0 22px;
+}
+.ld-tit-wenzi{
+    float:right;
+    text-align: right;
+}
+.ld-left-tit2 .ld-tit-wenzi{
+    margin-top:-14px;
+}
+
+/*php下面报名*/
+.ld-baoming-lis{
+    float:left;
+    width:400px;height:620px;
+    padding:0;
+    margin-top:38px;
+    background:url(../../../images/uek/images/ld_images/ld-phpbm01.png) center center no-repeat;
+}

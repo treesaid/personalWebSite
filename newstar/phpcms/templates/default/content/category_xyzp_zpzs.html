@@ -1,0 +1,62 @@
+{template "content","uek_nav"}
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/ly_xyzp.css" />
+<link rel="stylesheet" href="{CSS_PATH}uek/css/ld_pages.css">
+{template "content","uek_inside_banner"}
+
+
+<!--******内容开始*******-->
+    <div class="ly-container">
+    <!-- ***********面包屑导航************* -->
+        <div class="ly-navagation-box">
+            <ul class="ly-navnavagation">
+                <li class="ly-con"><a href="{siteurl($siteid)}">首页</a></li>
+                <li class="ly-con"><span>&gt;</span></li>
+                <li class="ly-con ly-con-active"><a href="javascript:">{$CATEGORYS[$top_parentid][catname]}</a></li>
+            </ul>
+        </div>
+    {template "content","side_ly_nav_xyzp_zpzs"}
+    <!-- ***********右侧内容区  con************* -->
+    <div class="ly-right-box">
+        <!-- 头部-->
+        <div class="ly-right-head">
+            <h1 class="ly-right-head-left">
+                <a href="javascript:;">学员成果展示</a>
+            </h1>
+        </div>
+        <!-- 下方列表-->
+        <!-- ui -->
+        {php $str=$CATEGORYS[$catid][arrchildid]}
+        {php $arr=explode(",", $str)}
+        {php $i=$arr[1]}
+        {php $catid = $i}
+        {pc:content action="lists" catid="$catid" moreinfo="1" page="$page" num="9"}
+        <ul class="ly-right-con-box">
+            {php $ld=$catid}
+            {loop $data $v}
+            <li data-catid="{$ld}" class="ld-usepage ly-right-con">
+                <!-- 头像-->
+                <a href="{$v[url]}" class="ly-right-con-photo"><img src="{$v[thumb]}" alt=""/></a>
+                <!-- 信息-->
+                <div class="ly-info">
+                    <h1 class="ly-name"><a href="javascript:;">{$v[name]}</a>
+                        <span class="ly-job ly-job-active"> / <a href="javascript:;">{$v[position_en]}</a></span>
+                    </h1>
+                    <h2 class="ly-majoy">{$v[major]}</h2>
+                    <p class="ly-class">{$v[class]}</p>
+                </div>
+            </li>
+            {/loop}
+        </ul>
+    </div>
+</div>
+
+<!--***************翻页开始****************-->
+<div class="ly-page-box clearfix">
+<div class="ly-page">
+{template "content","uek_pages"}
+{/pc}
+</div>
+</div><!--翻页结束-->
+{template "content","uek_footer"}
+<script type="text/javascript" src="{JS_PATH}uek/js/ly_xyzp.js"></script>
+<script src="{JS_PATH}uek/js/ld_pages.js"></script>

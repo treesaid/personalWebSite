@@ -1,0 +1,79 @@
+/*下方分享*/
+.ld-fxdi{
+    width:100%;height:auto;
+    position:relative;
+    border-top:2px solid #ededed;
+    border-bottom:2px solid #ededed;
+    overflow:hidden;
+}
+.ld-fenxiang{
+    float:left;
+    width:350px;height:40px;
+    line-height:40px;
+    margin:15px 0;
+}
+.ld-firfx{
+    float:left;
+    width:70px;
+    font-size:14px;
+    color:#666;
+}
+/*社会化分享*/
+div.bdshare-button-style2-16 a{
+    width:40px;height:40px;
+    margin:0;padding:0;
+    margin-right:14px;
+    background-image:url(../../../images/uek/images/ld_images/ld-pages.png);
+    background-repeat: no-repeat;
+}
+div.bdshare-button-style2-16 .bds_qzone{
+    background-position:-177px -10px;
+}
+div.bdshare-button-style2-16 .bds_tsina{
+    background-position:-177px -55px;
+}
+div.bdshare-button-style2-16 .bds_tqq{
+    background-position:-177px -105px;
+}
+div.bdshare-button-style2-16 .bds_weixin{
+    background-position:-177px -152px;
+}
+div.bdshare-button-style2-16 .bds_sqq{
+    background-position:-233px -10px;
+}
+/*右下点赞*/
+.ld-dianzan{
+    float:right;
+    width:106px;height:62px;
+    position:absolute;
+    right:0;top:9px;
+}
+.ld-li{
+    width:40px;height:55px;
+    cursor:pointer;
+    text-align:center;
+    overflow:hidden;
+}
+.ld-dianzan input{
+    display:block;
+    width:100%;height:40px;
+    border:0;outline:0;
+    border-radius:50%;
+    background:#c6c6c6 url(../../../images/uek/images/ld_images/ld-pages.png) -57px -141px no-repeat;
+    cursor:pointer;
+}
+.ld-up{float:left;}
+.ld-up input{
+    background-position:-1px -143px;
+}
+.ld-dianzan i{
+    font-style:normal;
+    color:#939393;
+    font-size:12px; 
+}
+input.ld-dianzan-active{
+    background-color:#fe6e20;
+}
+.ld-dianzan li:hover input{
+    background-color:#fe6e20;
+}

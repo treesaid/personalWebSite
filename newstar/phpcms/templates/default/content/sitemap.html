@@ -1,0 +1,24 @@
+{template "content","uek_nav"}
+{template "content","uek_inside_banner"}
+{pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"} 
+ 
+{loop $data $k $v} 
+ 
+{$v[catname]} 
+ 
+{pc:content action="category" catid="$k" num="10" siteid="$siteid" order="listorder ASC"} 
+ 
+{loop $data $r}  
+ 
+{$r[catname]} 
+  
+ 
+{/loop} 
+ 
+{/pc} 
+ 
+{/loop} 
+ 
+{/pc}
+ 
+{template "content","uek_footer"}

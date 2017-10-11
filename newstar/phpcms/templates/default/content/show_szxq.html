@@ -1,0 +1,106 @@
+{template "content","uek_nav"}
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/ly_tab.css" />
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/ljg_xyxq.css"/>
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/previous_next.css" />
+{template "content","uek_inside_banner"}
+        <!-- ********************  详情内容  ***********************  -->
+        <div class="ljg-details-container">
+            <!-- **************  面包屑 *****************  -->
+            <div class="ljg-crumbs">
+                <a href="{siteurl($siteid)}">首页</a>
+                <em>&gt;</em>
+                <a href="{$CATEGORYS[$top_parentid][url]}">{$CATEGORYS[$top_parentid][catname]}</a>
+                <em>&gt;</em>
+                <a href="javascript:;" class="ljg-index">教师详情</a>
+               <!--  <a href="javascript:;">高薪学员</a>
+                <em>&gt;</em>
+                <a href="javascript:;" class="ljg-index">丁同学</a> -->
+            </div><!-- 面包屑结束 -->
+
+            <!-- **************  内容  *****************  -->
+            <div class="ljg-content-container">
+                <!-- *********  标题 **********  -->
+                <h1 class="ljg-content-title">教师详情</h1>
+
+                <!-- *********  内容信息 **********  -->
+                <div class="ljg-content-info clearfix">
+                    <div class="ljg-info-publish">
+                        <span class="ljg-info-date">{$inputtime}</span>
+                        发布
+                    </div>
+                    <div class="ljg-info-source">
+                        来源：
+                        <span>{$source}</span>
+                    </div>
+                </div><!-- 内容信息结束 -->
+
+                <!-- *********  布道师 **********  -->
+                <!-- 头像 -->
+                <div class="ljg-student clearfix">
+                    <div class="ljg-portrait ly-portrait"><img src="{$thumb}"/></div>
+
+                    <!-- 布道师信息 -->
+                    <div class="ljg-student-info ly-student-info">
+                        <h2><span class="ly-name">{$teacher_name}老师</span>/{$grade}</h2>
+                        <ul>
+                            <li><strong>专&nbsp; &nbsp; &nbsp;业：</strong><span>{$major}</span></li>
+                            <li><strong>技&nbsp; &nbsp; &nbsp;能：</strong><span>{$skill}</span></li>
+                            <li><strong>经&nbsp; &nbsp; &nbsp;验：</strong><span>{$experience}</span></li>
+                            <li><strong>授课方向：</strong><span>{$direct}</span></li>
+                        </ul>
+                    </div><!-- 学员信息结束 -->
+                </div>
+
+                <!-- **************  学员感想  *****************  -->
+                <div class="ljg-main-container ljg-thoughts-container">
+                    <!-- **********  标题 *********** -->
+                    <div class="ljg-main-title ">
+                        <strong>教师简介</strong>
+                        <b>|</b>
+                        <span>TEACHER FEEL</span>
+                    </div><!-- 标题结束 -->
+
+                    <!-- **********  文章 *********** -->
+                    <div class="ljg-thoughts-article">
+                        {$work}　　                     
+                    </div><!-- 文章结束 -->
+                </div><!-- 学员感想结束 -->
+
+                <!-- **************  学员作品  *****************  -->
+                <div class="ljg-main-container ljg-works-container">
+                    <!-- **********  标题 *********** -->
+                    <div class="ljg-main-title ljg-main-title-ly">
+                        <strong>设计作品</strong>
+                        <b>|</b>
+                        <span>TEACHER WORK</span>
+                    </div><!-- 标题结束 -->
+
+                    <!-- **********  选项卡 *********** -->
+                    <!-- **********  作品列表 *********** -->
+                    <div class="ljg-works-list">
+                     <!--老师作品  -->
+                        <ul class="ljg-works-ul clearfix tab-con-lis tab-con-lis-active">
+                       {loop $works $k}
+                            <li class="ljg-works-lis">
+                                <a href="javascript:;"><img src="{$k[url]}"/>
+                                </a>
+                            </li>
+                       {/loop}
+                        </ul>
+                    </div>
+                    <!-- **********  分享 *********** -->
+                    {template 'content','uek_share'}
+                   <!-- 分享结束 -->
+                </div><!-- 学员作品结束 -->
+                <!-- 上一篇和下一篇 -->
+                <div class="ly-post-box">
+                    <div class="ly-post"><span>上一篇 : </span><a href="{$previous_page[url]}">{$previous_page[title]}</a></div>
+                    <div class="ly-post"><span>下一篇 : </span><a href="{$next_page[url]}">{$next_page[title]}</a></div>
+                </div><!-- 上一篇和下一篇结束-->
+            </div><!-- 内容结束 -->
+        </div><!-- 详情内容结束 -->
+{template "content","uek_footer"}
+<script src="{JS_PATH}uek/js/ljg_nav.js"></script>
+<script src="{JS_PATH}uek/js/ld_zxdk.js"></script>
+<script src="{JS_PATH}uek/js/ly_tab.js"></script>
+<script src="{JS_PATH}uek/js/ljg_xyxy_2.js"></script>

@@ -1,0 +1,284 @@
+/********************* 主体部分 ******************/
+.main{
+    width:100%;
+    height:auto;
+    background:#EDF4C8;
+}
+/********** 我们的产品 ***********/
+.main-box{
+    width:100%;
+    height:422px;
+    padding:0.5rem 0;
+}
+.main h2{
+    text-align: center;
+    font-size:0.24rem;
+    font-weight: normal;
+    color: #694c24;
+    margin: 5px auto;
+}
+.main h2 span{
+    font-weight: bold;
+    color: #e7ba2b;
+    padding: 0 5px;
+}
+.main-en{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size:0.14rem;
+    display: block;
+    color: #694c24;
+}
+.main-show{
+    width:100%;
+    height:3.56rem;
+    margin-top:0.15rem;
+    
+    position:relative;
+}
+.product{
+    background:url(../../../images/sxylys/img/11.jpg) center center no-repeat;
+    background-size:3.56rem;
+}
+/********** 中间文字 ********/
+.product-middle{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size:0.3rem;
+    font-weight: bold;
+    color: #694c24; 
+    position: absolute;
+    top: 46%;
+}
+.main-show a{
+    display:block;
+    font-size:0.22rem;
+    text-align:center;
+}
+/* 五常大米*/
+.p-wcdm{
+    display:block;
+    width:100%;
+    position: absolute;
+    top: 80%;
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    font-weight:bold;
+    color: #000;
+}
+/* 藜麦 */
+.p-lm{
+    color: #fff;
+    width: 60%;
+    position: absolute;
+    top: 20%;
+    right: 0;
+}
+/* 藜麦粉 */
+.p-lmf{
+    color: #fff;
+    width: 60%;
+    position: absolute;
+    top: 20%;
+    left: 0;
+}
+/* 藜麦查 */
+.p-lmc{
+    color: #fff;
+    width: 36%;
+    position: absolute;
+    top: 55%;
+    left: 0;
+}
+/* 黄小米 */
+.p-hxm{
+    color: #fff;
+    width: 36%;
+    position: absolute;
+    top: 55%;
+    right: 0;
+}
+/*********** 分界线 **********/
+.divide{
+    margin:0.3rem auto;
+}
+.divide img{
+    width:100%;
+}
+
+/************ 我们能为你解决什么问题 ***********/
+.resolve{
+    background:url(../../../images/sxylys/img/22.jpg) center center no-repeat;
+    background-size:3.56rem;
+}
+.resolve-middle{
+    display: block;
+    width:95%;
+    text-align: center;
+    font-size:0.22rem;
+    font-weight: bold;
+    color: #694c24; 
+    position: absolute;
+    top: 46%;
+    right:0;
+}
+/* 资质有问题 */
+.r-zz{
+    width: 94%;
+    font-size:0.2rem;
+    color: #000;
+    position: absolute;
+    top: 18%;
+    right: 0%;
+}
+/* 服务不满意 */
+.r-fw{
+    width: 94%;
+    font-size:0.2rem;
+    color: #000;
+    position: absolute;
+    top: 75%;
+    right: 0%;
+}
+/* 品质不理想 */
+.r-pz{
+    width:0.14rem;
+    font-size:0.2rem;
+    color: #fff;
+    position: absolute;
+    top: 30%;
+    left:20%;
+}
+/* 价格不合理 */
+.r-jg{
+    width:0.14rem;
+    font-size:0.2rem;
+    color: #fff;
+    position: absolute;
+    top: 30%;
+    right:20%;
+}
+/******************** 为什么选择我 *************/
+.choice{
+    background:url(../../../images/sxylys/img/33.jpg) center center no-repeat;
+    background-size:3.56rem;
+}
+/* 量身定做 */
+.c-ls{
+    width: 43%;
+    font-size: 0.2rem;
+    color: #fff;
+    position: absolute;
+    top: 16%;
+}
+/* 咨询增值 */
+.c-zx{  
+    width: 85%;
+    font-size: 0.2rem;
+    color: #000;
+    position: absolute;
+    top: 15%;
+    right: 0%;
+}
+/* 种植加工一体化 */
+.c-zz{
+    width: 40%;
+    font-size: 0,2rem;
+    color: #fff;
+    position: absolute;
+    top: 42%;
+    right: 0;
+}
+/* 政府扶持 */
+.c-zf{
+    width: 90%;
+    font-size: 0.2rem;
+    color: #000;
+    position: absolute;
+    top: 64%;
+}
+/******************** 为什么信任我 *************/
+.trust{
+    background:url(../../../images/sxylys/img/44.jpg) center center no-repeat;
+    background-size:3.56rem;
+}
+/* 行业资讯 */
+.t-hy{
+    width: 100%;
+    font-size: 0.2rem;
+    color: #fff;
+    position: absolute;
+    top: 15%;
+}
+/* 销售区域 */
+.t-xs{
+    width: 100%;
+    font-size: 0.2rem;
+    color: #fff;
+    position: absolute;
+    top: 74%;
+}
+/* 客户案例 */
+.t-kh{
+    width: 40%;
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    top: 43%;
+}
+/* 关于我们 */
+.t-gy{
+    width: 40%;
+    font-size: 0.2rem;
+    color: #fff;
+    position: absolute;
+    top: 43%;
+    right: 0;
+}
+/******************** 为何要立即选择我 *************/
+.immediately{
+    background:url(../../../images/sxylys/img/55.jpg) center center no-repeat;
+    background-size:3.56rem;
+}
+/* 现在优惠政策 */
+.i-xz{
+    width: 100%;
+    font-size: 0.2rem;
+    color: #fff;
+    position: absolute;
+    top: 20%;
+}
+/* 立即加入 */
+.i-lj{
+    width: 100%;
+    font-size: 0.2rem;
+    color: #fff;
+    position: absolute;
+    top: 77%;
+}
+
+/***************** 底部链接*****************/
+.chaining{
+    width:100%;
+    height:1.8rem;
+}
+.chaining li{
+    width:1.23rem;
+    height:0.4rem;
+    margin-bottom:0.2rem;
+    float:left;
+}
+.chaining li a{
+    display:block;
+    width:1rem;
+    height:100%;
+    font-size:0.14rem;
+    text-align:center;
+    line-height:0.4rem;
+    color:#fff;
+    background:#ae7c3b;
+    border-radius:0.06rem;
+    margin:0 auto;
+}

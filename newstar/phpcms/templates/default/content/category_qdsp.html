@@ -1,0 +1,49 @@
+{template "content","uek_nav"}
+<link rel="stylesheet" href="{CSS_PATH}uek/css/ld_yysp.css">
+{template "content","uek_inside_banner"}
+
+<!--*******************优逸客视频开始*******************-->
+    <div class="ld-box">
+        <!-- 视频标题 -->
+        <h2 class="ld-title">{$CATEGORYS[$top_parentid][catname]}</h2>
+        <!-- **************上方选项卡**************** -->
+        <ul class="ly-right-head-right">
+            <!-- 二级导航 -->
+            {pc:content action="category" catid="$catid" num="3" order="listorder ASC" moreinfo="1"}
+            {php $i=0}
+            {loop $data $v}
+            <li {if $i==0}class="ly-right-head-right-li-active"{else}class="ly-right-head-right-li"{/if}>
+                <a href="{$v[url]}">{$v[catname]}</a>
+            </li>
+            {if $i!==2} <span class="ly-right-head-right-span">/</span> {/if}
+            {php $i++}
+            {/loop}
+            {/pc}
+        </ul>
+        <!-- 下面视屏列表 -->
+        <div class="ld-ul-box">
+            <ul class="ld-ul">
+                {pc:content action="lists" catid="67" num="8" page="$page" order="id ASC" moreinfo="1"}
+                {php $ld=$catid}
+                {loop $data $v}
+               <li class="ld-usepage" data-catid="{$ld}"><a href="{$v[myurl]}" target="_blank">
+                    <div class="ld-img">
+                        <img src="{$v[thumb]}" alt="">
+                        <div class="ld-imgactive">{$v[content]}</div>
+                    </div>
+                    <div class="ld-wenzi">
+                        <h4>{$v[title]}</h4>
+                        <div class="ld-wzbtm"><span class="ld-load">学习人数{$v[description]}</span><span class="ld-renshu">下载量{$v[keywords]}</span></div>
+                    </div>
+                </a></li>
+                {/loop}
+            </ul>
+             {template "content","uek_pages"}
+        </div>
+        {/pc}   
+    </div><!--******优逸客视频结束******-->
+{template "content","uek_footer"}
+</body>
+<script src="{JS_PATH}uek/js/ld_yysp.js"></script>
+<script src="{JS_PATH}uek/js/ld_pages.js"></script>
+</html>

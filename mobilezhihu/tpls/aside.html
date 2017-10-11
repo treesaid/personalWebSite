@@ -1,0 +1,29 @@
+<div class="header">
+	<div class="header-list iconfont" block>&#xe619;</div>
+	<div class="header-fen iconfont" ng-controller="theme">{{lei.name}}</div>
+	<div class="header-jia" cutjia>+</div>
+</div>
+<div class="content-outer">
+	<div class="banner-box" style="background:url({{lei.background}}) center center/cover">
+		<div class="batitle">{{lei.description}}</div>
+	</div>
+   <section>
+   	     <div class="content-header">主编
+   	     	<div class="left-editor" >
+   	     		<div class="editor" ng-repeat="n in editor" style="background:url({{n.avatar}}) center center/cover"></div>
+   	     	</div>
+   	     </div> 
+		  <div class="content-inner">
+		  	<ul class="box-outer">
+				<li class="box" ng-repeat="v in list">
+					<a href="#/show/{{v.id}}">
+						<div class="img"><img src="{{v.images[0]||'images/top_logo.png'}}" alt=""></div>
+						<span>{{v.title}}</span>
+					</a>
+				</li>
+			</ul>
+		 </div>
+	</section>
+	<footer></footer>
+ </div>
+

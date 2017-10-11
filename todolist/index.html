@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>待办事项</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="todolist.css">
+    <script src="jquery.js"></script>
+    <script src="bootstrap.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-default xjn-topbox">
+                    <div class="panel-heading title"><i class="icon">&#xe612;</i>待办事项</div>
+                    <div class="panel-body top">
+                        <!--<input type="text" placeholder="请输入待办事项" class="content">-->
+                        <textarea name="" class="content" cols="20" rows="3" placeholder="请输入待办事项"></textarea>
+                        <input type="button" value="提交" class="btn btn-success btn-sm sub">
+                        <input type="button" value="清空所有" class="btn btn-danger btn-sm clearall">
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading not-title">
+                        <h3 class="panel-title"><i class="icon">&#xe657;</i>未完成</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="notdown">
+                           <!--<li class="list">-->
+                               <!--<div class="check"></div>-->
+                               <!--<p class="text">下飞机快是打飞机开房间爱离开房间爱聊</p>-->
+                               <!--<div class="del">删除</div>-->
+                           <!--</li>-->
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading com-title">
+                        <h3 class="panel-title"><i class="icon">&#xe646;</i>已完成</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="complate">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+   function getData() {
+       var arr=localStorage.evenlist? JSON.parse(localStorage.evenlist):[];
+       return arr;
+   }
+    function  saveData(data) {
+        localStorage.evenlist=JSON.stringify(data);
+    }
+    $(".sub").click(function () {
+        var value=$(".content").val();
+        var date=new Date();
+        var year=date.getFullYear();
+        var month=date.getMonth()+1;
+        var day=date.getDate();
+        var hour=date.getHours();
+        var min=date.getMinutes();
+        var time=year+'年'+month+'月'+day+'日  '+hour+':'+min;
+        if(value==""){
+            return;
+        }else{
+            var data=getData();
+            data.push({content:value,done:false,time:time});
+            saveData(data);
+            reWrite();
+        }
+        $(".content").val("");
+    })
+    function changestate(){
+        var data=getData();
+        var index=$(this).parent().attr("index");
+        data[index].done=!data[index].done;
+        saveData(data);
+        reWrite();
+    }
+    function reWrite() {
+       $(".notdown,.complate").empty();
+        var data=getData();
+        $.each(data,function (index,value) {
+            if(value.done){
+                $("<li class='list'></li>").attr("index",index).html('<div class="check" onclick="changestate.call(this)"></div> <p class="text">'+value.content+'</p><time>'+value.time+'</time> <div class="del">删除</div>').appendTo('.complate');
+            }else{
+                $("<li class='list'></li>").attr("index",index).html('<div class="check" onclick="changestate.call(this)"></div>  <p class="text" contenteditable="true" data-role="content">'+value.content+'</p><time>'+value.time+'</time><div class="del">删除</div>').appendTo(".notdown");
+//                alert($('.list').length);
+            }
+        })
+    }
+    reWrite();
+   $('.container').delegate('.del','click',function () {
+       var data=getData();
+       var index=$(this).parent().attr("index");
+       data.splice(index,1);
+       saveData(data);
+       reWrite();
+   })
+   $(".container").on('blur','[contenteditable=true]',function () {
+       var data=getData();
+       var index=$(this).parent().attr("index");
+       var value=$(this).html();
+       var attr=$(this).attr("data-role");
+       data[index][attr]=value;
+       saveData(data);
+   })
+$(".clearall").click(function () {
+    var data=getData();
+    data.splice(0,data.length);
+    saveData(data);
+    reWrite();
+})
+
+</script>
+</html>

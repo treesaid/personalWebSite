@@ -1,0 +1,41 @@
+    {template "content","myheader"}
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}sxylys/css/limai.css" />
+    <!-- ************ 主体部分 ************* -->
+    <div class="list-main">
+        <div class="lm-nav">
+            <a href="#" class="lm-product">藜麦产品</a>
+            <div class="lm-line"></div>
+            <div class="more">
+                <a href="#">查看全部</a>
+                <div class="more-icon"></div>
+            </div>
+        </div>
+        {template "content","side_nav"}
+    </div><!-- *************** 主体部分结束 *********-->
+
+    <!-- 右侧侧边栏 -->
+    <!-- 遮罩 -->
+    <div class="side-mask mask-hide"></div>
+    <div class="side-box side-hide">
+        <div class="side">
+            <div class="side-title">藜麦产品</div>
+            <ul class="side-list">
+                {pc:content  action="category" catid="$catid" num="10" siteid="$siteid" order="listorder ASC"}
+                {loop $data $v}
+                <li>
+                    <a href="{$v[url]}">
+                        <div class="side-gt"><img src="{IMG_PATH}sxylys/img/win2.png" alt="" /></div>
+                        <div class="side-text">{$v[catname]}</div>
+                    </a>
+                </li>
+                <li class="side-line"></li>
+                {/loop}
+                {/pc}
+            </ul>
+        </div> <!-- 右侧侧边栏结束 -->
+        <!-- 返回键 -->
+        <div class="side-back"><img src="{IMG_PATH}sxylys/img/win2.png" alt="" /></div>
+    </div>
+
+    {template "content","myfooter"}
+    <script type="text/javascript" src="{JS_PATH}sxylys/js/limei.js"></script>

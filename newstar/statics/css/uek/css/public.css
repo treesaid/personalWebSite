@@ -1,0 +1,519 @@
+
+/********************  公共样式  *************************/
+*{
+    font-family:"microsoft yahei";
+}
+/*.lyn-jianban{
+    width:100%;
+    height:58px;
+    background:url(../../../images/uek/images/lyn-jianban.jpg) repeat;
+}*/
+
+/********************  公共样式  *************************/
+/*******公共标题********/
+.szh-top-outer{
+    width:100%;
+    height:58px;
+    background:url(../../../images/uek/images/szh_images/lyn-jianban.jpg) repeat-x; 
+    overflow: hidden;
+}
+.szh-top{
+    width:1200px;
+    height:60px;
+    margin:0 auto;
+    background:#fafafa;
+    position: relative;
+}
+/*标题蓝条*/
+.szh-line{
+    position:absolute;
+    width:5px;
+    height:58px;
+    background:#01B5FF;
+    left:-5px;
+    top:0;
+}
+.szh-line1{
+    position:absolute;
+    width:5px;
+    height:58px;
+    background:#01B5FF;
+    right:-5px;
+    top:0;
+}
+/*标题左部*/
+.szh-left{
+    width:300px;
+    height:100%;
+    float:left;
+    padding-left:15px;
+}
+/*左标题上*/
+.szh-title-top{
+   width:100%;
+   font-size: 34px;
+   height:35px;
+   line-height: 35px;
+   font-weight:600;
+   
+}
+/*左标题底部*/
+.szh-title-bottom{
+    width:100%;
+    height:16px;
+    padding-top:8px;
+    text-transform: uppercase;
+    line-height: 16px;
+}
+.szh-title-left{
+    float: left;
+    font-size: 20px;
+    font-weight:600;
+}
+.szh-title-right{
+    color:#01b5ff;
+    margin-left: 5px;
+    font-weight:300;
+}
+/*标题右部*/
+.szh-right{
+    width:auto;
+    height:100%;
+    float:right;
+}
+.szh-right-inner{
+    width:auto;
+    height:27px;
+    line-height: 27px;
+    padding-top:30px;
+    margin-right: 18px;
+}
+.szh-right-inner span{
+    float:left;
+    margin:0 10px;
+    font-size:16px;
+    color:#666;
+}
+/*tab选项*/
+.szh-title-item{
+    float:left;
+}
+.szh-title-item a{
+    height:100%;
+    width:auto;
+    display: block;
+    font-size:16px;
+    color:#666;
+    /*border-top:3px solid #fff;*/
+}
+/*.szh-title-itemactive a{
+    border-top:3px solid #01B5FF;
+    color:#01B5FF;
+}
+.szh-title-item a:hover{
+    color:#01B5FF;
+    border-top:3px solid #01B5FF;
+}*/
+
+
+/***************************  页头 ****************************/
+.ljg-header-container{
+    width:100%;
+    height:116px;
+    background:#fff;
+}
+.ljg-header-inner{
+    width:1100px;
+    height:100%;
+    margin:0 auto;
+}
+/************  logo ************/
+.ljg-logo-container{
+    float: left;
+    width:475px;
+    height:100%;
+}
+.ljg-logo-container a{
+    display:block;
+    width:100%;
+    height:80%;
+    background:url(../../../images/uek/images/ljg-logo.png) no-repeat left center/auto 100%;
+    margin-top:10px;
+    padding-left: 120px;
+    box-sizing: border-box;
+}
+.ljg-logo-container span{
+	float:left;
+	font-size: 26px;
+    color: #FEDB0D;
+    text-transform: uppercase;
+    padding-top:22px;
+}
+.ljg-logo-container a .english{
+	padding-top:0;
+	font-family: "苹方";
+}
+/*************  商标 *************/
+.ljg-brand-container{
+    float: right;
+    width:auto;
+    height:100%;
+}
+.ljg-brand-container ul{
+    height:auto;
+    padding-top:40px;
+}
+.ljg-brand-container ul li{
+    float: right;
+    margin-left:30px;
+}
+
+/***************************  导航 ****************************/
+.ljg-nav-container{
+    width:100%;
+    height:60px;
+    background:#201E1F;
+    /*background:#FF9D31;*/
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.11), 0 5px 15px rgba(0,0,0,0.2);
+    position:relative;
+    z-index:999999;
+}
+.ljg-nav-inner{
+    width: 1200px;
+    height: 70px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: -6px;
+    margin-left: -600px;
+}
+.ljg-nav-inner .ljg-nav-ul{
+    width:100%;
+    height:70px;
+}
+.ljg-nav-inner .ljg-nav-ul .ljg-nav-lis{
+    float: left;
+    width:14.28%;
+    height:70px;
+    text-align: center;
+    position:relative;
+    transition:all 0.3s;
+}
+.ljg-nav-inner .ljg-nav-ul .ljg-nav-link{
+    display:inline-block;
+    width:auto;
+    height:70px;
+    line-height:70px;
+    text-align:center;
+    font-size:20px;
+    color:#fff;
+    padding:0 27px;
+    border-radius:2px;
+    transition:all 0.5s;
+    cursor:pointer;
+}
+.ljg-nav-inner .ljg-nav-ul .ljg-nav-link-active{
+    background:#FE440A;
+}
+
+
+/**********  隐藏导航 ***********/
+.ljg-nav-hide-ul{
+    width:auto;
+    height:auto;
+    padding-top:15px;
+    position:absolute;
+    left:50%;
+    top:55px;
+    margin-left:-110px;
+    z-index:10000;
+    /*overflow:hidden;*/
+    display:none;
+}
+.ljg-nav-hide-ul-last{
+    display:none!important;
+}
+
+.ljg-nav-hide-ul .ljg-nav-hide-line{
+    display:block;
+    width:1px;
+    height:100%;
+    background:#fff;
+    position:absolute;
+    top:0;
+    left:50%;
+    z-index:-1;
+}
+.ljg-nav-hide-ul .ljg-nav-hide-line-left{
+    left:50%;
+    margin-left:-41px;
+}
+.ljg-nav-hide-ul .ljg-nav-hide-line-right{
+    margin-left:41px;
+}
+.ljg-nav-hide-ul .ljg-nav-hide-line-left:before{
+	content:"";
+	display: block;
+	width:3px;
+	height:3px;
+	border:1px solid #fff;
+	position:absolute;
+	left:-2px;
+	top:0;
+	border-radius: 50%;
+	background:#FE440A;
+}
+.ljg-nav-hide-ul .ljg-nav-hide-line-right:before{
+	content:"";
+	display: block;
+	width:3px;
+	height:3px;
+	border:1px solid #fff;
+	position:absolute;
+	left:-2px;
+	top:0;
+	border-radius: 50%;
+	background:#FE440A;
+}
+.ljg-nav-hide-ul li{
+    display:block;
+    width:auto;
+    height:35px;
+    margin:0 auto;
+    margin-top:8px;
+    text-align: center;
+}
+
+.ljg-nav-hide-ul li a{
+    display:inline-block;
+    width:auto;
+    height:33px;
+    padding:0 20px;
+    background:#fff;
+    border-radius: 2px;
+    line-height:33px;
+    font-size:20px;
+    color:#1F2138;
+    white-space: nowrap;
+    transition:all 0.3s;
+    cursor:pointer;
+}
+.ljg-nav-hide-ul li:hover a{
+    background:#FE440A;
+    color:#fff;
+}
+
+
+
+
+
+/***************************  banner ****************************/
+.ljg-banner-container{
+    width:100%;
+    height:596px;
+    overflow: hidden;
+}
+.ljg-banner-container-inside{
+    height:600px;
+}
+.ljg-banner-inner{
+    width:100%;
+    height:100%;
+    position:relative;
+    overflow: hidden;
+}
+/*图片*/
+.ljg-banner-inner .ljg-banner-ul{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    overflow: hidden;
+}
+.ljg-banner-inner .ljg-banner-ul li{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    display:none;
+    overflow:hidden;
+}
+.ljg-banner-inner .ljg-banner-ul .ljg-banner-lis-active{
+    display:block;
+    z-index: 5;
+}
+.ljg-banner-inner .ljg-banner-ul li a{
+    display: block;
+    width:100%;
+    height: 100%;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:100%;
+}
+.ljg-banner-inner .ljg-banner-ul li img{
+    width:auto;
+    height: 100%;
+}
+
+
+/*滑动切换*/
+.ljg-banner-container-inside .ljg-banner-slide{
+    display: none;
+}
+.ljg-banner-slide{
+    width:100%;
+    height:10px;
+    position:absolute;
+    bottom:17px;
+    left:0;
+    z-index: 1000000;
+}
+.ljg-banner-slide ul{
+    height:100%;
+    text-align: center;
+}
+.ljg-banner-slide ul li{
+    display:inline-block;
+    width:75px;
+    height:8px;
+    margin-right:8px;
+    border:1px solid #01B5FF;
+    border-radius:10px;
+    cursor:pointer;
+}
+.ljg-banner-slide ul .active{
+    background:#01B5FF;
+}
+
+/************* footer开始 ***********/
+.xjn-footer{
+    width: 100%;
+    height: 371px;
+    padding-top: 1px;
+    background: #201E1F;
+    margin-top:30px;
+}
+.xjn-footer-con{
+    width:958px;
+    height: 212px;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+/****左侧联系我们****/
+.xjn-footer-con .xjn-footleft{
+    width: 326px;
+    height:100%;
+    float: left;
+    flex-grow:0;
+    border-right: 1px solid #201E1F;
+    padding-left: 4px;
+    box-sizing: border-box;
+}
+.xjn-footer-con .xjn-footleft .xjn-contact-en{
+    font-size: 16px;
+    color: #fff;
+}
+.xjn-footer-con .xjn-footleft .xjn-contact-en span{
+    font-weight:bold;
+}
+.xjn-footer-con .xjn-footleft .xjn-contact-ch{
+    font-size: 16px;
+    color: #fff;
+    margin-top: 6px;
+}
+.xjn-footer-con .xjn-footleft .xjn-address{
+    margin-top: 20px;
+}
+.xjn-footer-con .xjn-footleft .xjn-address p{
+    font-size: 14px;
+    color: #fff;
+    line-height: 20px;
+}
+.xjn-footer-con .xjn-footleft .xjn-tel{
+    font-size: 14px;
+    color: #fff;
+    line-height: 20px;
+    margin-top: 14px;
+}
+/****中间联系我们****/
+.xjn-footer-con .xjn-footmid{
+    width: 438px;
+    height: 100%;
+    float: left;
+    border-left: 1px solid #201E1F;
+    border-right: 1px solid #201E1F;
+}
+.xjn-footer-con .xjn-footmid .xjn-mid1{
+    width: 132px;
+    height: 100%;
+    float: left;
+    padding-left: 22px;
+    padding-top: 8px;
+    box-sizing: border-box;
+}
+.xjn-footer-con .xjn-footmid .xjn-mid2{
+    width: 96px;
+    padding-left: 12px;
+    margin-left: 2px;
+}
+.xjn-footer-con .xjn-footmid .xjn-mid1 h3{
+    font-size: 16px;
+    color: #fff;
+}
+.xjn-footer-con .xjn-footmid .xjn-mid1 .xjn-mid1-con{
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+}
+.xjn-footer-con .xjn-footmid .xjn-mid1 .xjn-mid1-con li a{
+    font-size: 14px;
+    color: #fff;
+    line-height: 28px;
+}
+.xjn-footer-con .xjn-footmid .xjn-mid1 .xjn-mid1-con li a:hover{
+   text-decoration: underline;
+}
+.xjn-footer-con .xjn-footright{
+    width: 191px;
+    height: 100%;
+    float: left;
+    border-left: 1px solid #201E1F;
+}
+.xjn-footer-con .xjn-footright h3{
+    /*font-family:"Impact","Arial";*/
+    color: #fff;
+    font-size: 23px;
+    margin-left: 27px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+.xjn-footer-con .xjn-footright .xjn-pic{
+    margin-top: 12px;
+    margin-left:27px;
+    width:164px;
+    height:164px;
+    overflow:hidden;
+}
+.xjn-footer-con .xjn-footright .xjn-pic img{
+    width:100%;
+}
+/*******底部版权信息******/
+.xjn-copy{
+    width: 100%;
+    height:80px;
+    border-top:1px solid #ccc;
+    /*box-shadow:0 -5px 12px #1F81E0;*/
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: 80px;
+}
+.xjn-copy span{
+    margin-right: 16px;
+}
+
+/*******footer 结束******/

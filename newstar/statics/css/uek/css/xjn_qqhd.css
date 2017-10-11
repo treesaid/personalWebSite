@@ -1,0 +1,141 @@
+
+/******************** 右边内容开始 *******************/
+.xjn-newcon{
+    padding-bottom: 0;
+}
+.xjn-title{
+    font-size: 20px;
+    font-weight: bold;
+    color:#000;
+}
+/*欢迎词开始*/
+.xjn-intro{
+    width:816px;
+    height:91px;
+    border:2px dotted #9F9F9F;
+    border-radius: 95px;
+    margin-top: 30px;
+}
+.xjn-intro .xjn-rlogo{
+    width:123px;
+    height:100%;
+    float:left;
+}
+.xjn-intro .xjn-rlogo img{
+    float:right;
+    margin-top: 4px;
+    height:90%;
+}
+.xjn-intro .xjn-join{
+    width:630px;
+    height:auto;
+    font-size: 14px;
+    color:#666;
+    line-height: 24px;
+    float:left;
+    margin-top: 10px;
+    margin-left: 10px;
+}/*欢迎词结束*/
+
+/*一键加群开始*/
+.xjn-onekey{
+    width:760px;
+    height:158px;
+    margin:0 auto;
+    margin-top:46px;
+    margin-bottom: 25px;
+}
+.xjn-onekey .xjn-item{
+    width:157px;
+    height:157px;
+    background:url('../../../images/uek/images/xjn_img/xjn-border.png') no-repeat;
+    float:left;
+    margin-right: 44px;
+}
+.xjn-onekey  .xjn-lastitem{
+    margin-right: 0;
+}
+.xjn-item .xjn-icon{
+    width:157px;
+    height:86px;
+}
+.xjn-item .xjn-icon1{
+    background:url('../../../images/uek/images/xjn_img/xjn-apple.png') center center no-repeat;
+}
+.xjn-item .xjn-icon2{
+    background:url('../../../images/uek/images/xjn_img/xjn-web.png') center center no-repeat;
+}
+.xjn-item .xjn-icon3{
+    background:url('../../../images/uek/images/xjn_img/xjn-php.png') center center no-repeat;
+}
+.xjn-item .xjn-icon4{
+    background:url('../../../images/uek/images/xjn_img/xjn-free.png') center center no-repeat;
+}
+.xjn-item p{
+    font-size: 18px;
+    color:#000;
+    text-align: center;
+}
+.xjn-item .xjn-btn{
+    display:block;
+    width:124px;
+    height:30px;
+    border:1px solid #01B5FF;
+    border-radius: 30px;
+    margin:10px auto;
+    font-size: 18px;
+    text-align: center;
+    line-height: 30px;
+    color:#01B5FF;
+    transition:all 0.3s;
+}
+.xjn-item .xjn-btn:hover{
+    background:#01B5FF;
+    color:#fff;
+}
+/*一键加群结束*/
+/*入伙优势开始*/
+.xjn-rhys{
+    width:714px;
+    height:190px;
+    margin-left: 62px;
+    margin-top: 32px;
+}
+.xjn-rside .xjn-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+.xjn-rhys-list{
+    width:50%;
+    height:53px;
+    float:left;
+    margin-bottom: 40px;
+}
+.xjn-rhys-list .xjn-cir{
+    width:53px;
+    height:53px;
+    background:#01B5FF;
+    border-radius: 50%;
+    float:left;
+    font-size: 36px;
+    text-align: center;line-height: 53px;
+    color:#fff;
+    font-weight: bold;
+}
+.xjn-rhys-list .xjn-text{
+    overflow:hidden;
+    height:100%;
+    padding-left: 16px;
+}
+.xjn-rhys-list .xjn-text h3{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 28px;
+    color:#000;
+}
+.xjn-rhys-list .xjn-text p{
+    font-size: 14px;
+    color:#666;
+    margin-top: 4px;
+}

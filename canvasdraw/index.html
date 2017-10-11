@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>画板</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: "微软雅黑";
+    }
+    body{
+        background: #101115;
+    }
+    .draw{
+        display: block;
+        width: 900px;
+        height: 640px;
+        background: #eee;
+        /*margin: 20px auto;*/
+        cursor: pointer;
+        float:left;
+    }
+    .toolleft{
+        width: 270px;
+        height:100%;
+        background:#101115;
+        float: left;
+    }
+    .toolbox{
+        width: 270px;
+        height: auto;
+    }
+    .drowtype,.drowwidth{
+        width: 90%;
+        height:50px;
+        margin: 0 auto;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        /*border-bottom: 1px solid #E44A24;*/
+        box-shadow: 0 0px 6px  #33E7A6;
+        margin-bottom:6px;
+    }
+    .drowtype:hover{
+        box-shadow: 0 0px 20px #E44A24;
+    }
+    /*--------图形选择-----*/
+    .active{
+        margin-top: 20px;
+    }
+    #choosetype{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    #choosetype li{
+        height: 30px;
+        font-size: 16px;
+        line-height: 30px;
+        color: #eee;
+        float: left;
+        background: #282828;
+        padding: 0 10px;
+        cursor: pointer;
+        margin-right: 15px;
+        /*transition: all 0.5s ease-in-out;*/
+    }
+    #choosetype .line{
+        background: #E44A24;
+    }
+    .typetitle,.widthtitle{
+        height: 30px;
+        font-size: 16px;
+        line-height: 30px;
+        color: #eee;
+        float: left;
+    }
+    #choosewidth,#chooseclear,#pencialchoose{
+        display: block;
+        width: 70px;
+        height: 30px;
+        background: #282828;
+        border: 0;
+        text-align: center;
+        line-height: 30px;
+        color: #eee;
+        outline: none;
+        float: left;
+        margin-left: 20px;
+    }
+    .colortitle{
+        height: 30px;
+        font-size: 16px;
+        line-height: 30px;
+        color: #eee;
+    }
+    .colortitle .choosecolor,.canvascolor{
+        width: 50px;
+        height: 30px;
+        background: transparent;
+        border: 0;
+        vertical-align: middle;
+        margin-left: 30px;
+        outline: none;
+        /*box-shadow: 0 0px 6px rgba(228, 74, 36, 0.75);*/
+    }
+    .tcstyle{
+        display: flex;
+        align-items: center;
+    }
+    .tcstyle li{
+        width:60px;
+        height: 24px;
+        float: left;
+        text-align: center;
+        line-height: 24px;
+        font-size:16px;
+        color: #fff;
+        /*background: #FBC203;*/
+        background: #4c4c4c;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+    .tcstyle li.active{
+        background: #F77124;
+    }
+    .tcstyle .stroke{
+        background:#EF6010 ;
+    }
+    .tcstyle .fill{
+        margin-left:30px;
+    }
+    /*橡皮擦*/  /*铅笔*/
+    .eraser,.pencial,.poly{
+        height: 30px;
+        font-size: 16px;
+        line-height: 30px;
+        color: #eee;
+        float: left;
+        background: #E44A24;
+        padding: 0 10px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .eraser:hover,.pencial:hover,.poly:hover{
+        background: #33e7a6;
+    }
+    /*多边形绘制*/
+    .polynum{
+        display: block;
+        width: 70px;
+        height: 30px;
+        background: #282828;
+        border: 0;
+        text-align: center;
+        line-height: 30px;
+        color: #eee;
+        outline: none;
+        float: left;
+        font-size: 14px;
+        margin-left: 20px;
+    }
+    /*剪切*/
+    /*.cut{
+        width: 60px;
+        text-align: center;
+        height: 30px;
+        font-size: 16px;
+        line-height: 30px;
+        color: #eee;
+        background: #ef6010;
+        padding: 0 10px;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+    .cut:hover{
+        background: #48ecef;
+    }*/
+    /*----头像----*/
+    .touxiang{
+        width: 100px;
+        height: 100px;
+        background-image:url("touxiang.png");
+        background-size:100px 100px;
+        margin: 0 auto;
+        margin-top: 20px;
+        border-radius: 50%;
+    }
+    .xjn{
+        width: 100%;
+        height: 30px;
+        margin-top: 5px;
+        position: relative;
+        padding-bottom: 10px;
+        box-shadow: 0 5px 20px -5px #E44A24;
+    }
+    .xjn p{
+        width: 86px;
+        height: 30px;
+        color: #E44A24;
+        position: absolute;
+        left:50%;
+        margin-left: -43px;
+        top:0;
+        z-index: 2;;
+        text-align: center;
+        line-height: 40px;
+        font-size: 20px;
+        background: #101115;
+    }
+    .xjn span{
+        display: block;
+        width: 160px;
+        height: 1px;
+        background:#E44A24;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        margin-left: -80px;
+    }
+    /*---右边工具栏----*/
+    .toolright{
+        width: 154px;
+        height: auto;
+        min-height: 100px;
+        position: absolute;
+        right: 0;
+        top:180px;
+    }
+    /*清空画布*/
+    .clearall,.cut,.newfile,.copy,.save,.back{
+        width: 100px;
+        text-align: center;
+        height: 30px;
+        font-size: 16px;
+        line-height: 30px;
+        color: #eee;
+        background: #ef6010;
+        padding: 0 10px;
+        cursor: pointer;
+        /*margin-left: 40px;*/
+        transition: all 0.5s;
+        margin-bottom: 10px;
+    }
+    .clearall:hover,.cut:hover,.newfile:hover,.copy:hover,.save:hover,.back:hover{
+        background: #48ecef;
+    }
+</style>
+<body>
+<div class="toolleft">
+    <div class="touxiang"></div>
+    <h4 class="xjn"><p>我的画板</p><span></span></h4>
+    <div class="toolbox">
+        <div class="drowtype active">
+            <!--<p class="typetitle">样式选择</p>-->
+            <ul name="" id="choosetype">
+                <li class="line">线条</li>
+                <li class="rect">矩形</li>
+                <li class="circle">圆</li>
+            </ul>
+        </div>
+        <!--多边形绘制-->
+        <div class="drowtype">
+            <p class="poly">多边形</p>
+            <input type="number" min="3" max="20" class="polynum" value="3">
+        </div>
+        <div class="drowtype">
+            <p class="widthtitle">线条选择：</p>
+            <select name="" id="choosewidth">
+                <option value="1">细</option>
+                <option value="3">中等</option>
+                <option value="5">宽</option>
+                <option value="10">特宽</option>
+            </select>
+        </div>
+        <!--填充样式-->
+        <ul class="drowtype tcstyle">
+            <li class="stroke">描边</li>
+            <li class="fill">填充</li>
+        </ul>
+        <div class="drowtype">
+            <label class="colortitle">画布颜色：<input type="color" name="color" class="canvascolor" value="#eeeeee"></label>
+        </div>
+        <div class="drowtype">
+            <label class="colortitle">画笔颜色：<input type="color" name="color" class="choosecolor"></label>
+        </div>
+        <div class="drowtype">
+            <p class="eraser">橡皮擦</p>
+            <select name="" id="chooseclear">
+                <option value="10">小</option>
+                <option value="20">中等</option>
+                <option value="30">大</option>
+            </select>
+        </div>
+        <div class="drowtype">
+            <p class="pencial">铅笔</p>
+            <select name="" id="pencialchoose">
+                <option value="3">细</option>
+                <option value="6">中等</option>
+                <option value="12">粗</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div class="toolright">
+    <div class="newfile">新建</div>
+    <!--剪切-->
+    <div class="cut">剪切</div>
+    <div class="copy">复制</div>
+    <div class="back">撤销</div>
+    <div class="save">保存</div>
+    <div class="clearall">清空画布</div>
+</div>
+    <canvas class="draw" width="900" height="640"></canvas>
+</body>
+<script src="draw.js"></script>
+<script src="jquery.js"></script>
+<script>
+    var canvas=document.querySelector('.draw');
+    var cobj=canvas.getContext("2d");
+    var toolbox=document.querySelector('.toolbox');
+    var choosetype=document.querySelectorAll("#choosetype li");
+    var choosewidth=document.querySelector("#choosewidth");
+    var eraser=document.querySelector(".eraser");
+    var pencial=document.querySelector('.pencial');
+    var choosecolor=document.querySelector(".choosecolor");
+    var canvascolor=document.querySelector('.canvascolor');
+    var chooseclear=document.querySelector("#chooseclear");
+    var choosepencial=document.querySelector("#pencialchoose");
+    var tcstyle=document.querySelectorAll('.tcstyle li');
+    var clearall=document.querySelector('.clearall');
+    var cut=document.querySelector('.cut');
+    var back=document.querySelector('.back');
+    var save=document.querySelector('.save');
+    var copy=document.querySelector('.copy');
+    var ox,oy,ow,oh;
+    var arr=[];
+    var shape="line";
+    canvas.style.cursor='url(img/shizi.png),default';
+    var lsize;
+    var pnum="3";
+    var type;
+    //选择图形
+    for(var i=0;i<3;i++){
+        choosetype[i].onclick=function () {
+            shape=this.className;
+            canvas.style.cursor='url(img/shizi.png),default';
+            for(var j=0;j<3;j++){
+                choosetype[j].style.background="#282828";
+            }
+            this.style.background="#E44A24";
+        }
+    }
+    //多边形绘制
+    var poly=document.querySelector('.poly');
+    var polynum=document.querySelector('.polynum');
+    poly.onclick=function () {
+        shape="poly";
+        canvas.style.cursor='url(img/shizi.png),default';
+    }
+    polynum.onchange=function () {
+        shape="poly";
+        pnum=this.value;
+        canvas.style.cursor='url(img/shizi.png),default';
+    }
+    //选择线宽
+    var lwidth;
+    choosewidth.onchange=function () {
+        lwidth=this.value;
+    }
+    //选择画笔颜色
+    var lcolor;
+    choosecolor.onchange=function () {
+        lcolor=this.value;
+    }
+    //画布颜色
+    canvascolor.onchange=function () {
+        canvas.style.background=this.value;
+    }
+    //填充样式
+    for(var i=0;i<2;i++){
+        tcstyle[i].onclick=function () {
+            type=this.className;
+            for(var j=0;j<2;j++){
+                tcstyle[j].style.background="#4C4C4C";
+            }
+            this.style.background="#EF6010";
+        }
+    }
+    //选择橡皮擦
+    chooseclear.onchange=function () {
+        shape="eraser";
+        lsize=this.value;
+        canvas.style.cursor='url(img/eraser.png),default';
+    }
+    eraser.onclick=function () {
+        shape="eraser";
+        lsize="10";
+        canvas.style.cursor='url(img/eraser.png),default';
+    }
+    //选择铅笔
+    choosepencial.onchange=function () {
+        shape="pencial";
+        canvas.style.cursor='url(img/pencil.png),default';
+    }
+    pencial.onclick=function () {
+        shape=this.className;
+        canvas.style.cursor='url(img/pencil.png),default';
+    }
+    //清空画布
+    clearall.onclick=function () {
+        cobj.beginPath();
+        cobj.clearRect(0,0,900,640);
+        arr=[];
+    }
+    //剪切
+    var cutflag=false;
+    var cutdata;  //存储剪切区域的数据
+    var lox;var loy;var low;var loh;  //用来保存剪切区域的位置和大小
+    cut.onclick=function () {
+        shape="cut";
+        canvas.style.cursor='url(img/shizi.png),default';
+    }
+    //复制
+    var copyflag=false;
+    copy.onclick=function () {
+        shape="cut";
+        canvas.style.cursor='url(img/shizi.png),default';
+        copyflag=true;
+    }
+    //撤销
+    back.onclick=function () {
+        arr.pop();
+        cobj.clearRect(0,0,900,640);
+        cobj.putImageData(arr[arr.length-1],0,0,0,0,900,640);
+        canvas.style.cursor='default';
+    }
+    //保存
+    save.onclick=function () {
+        var res=canvas.toDataURL("image/png");
+        location.href=res;
+        canvas.style.cursor='default';
+    }
+    canvas.onmousedown=function (e) {
+        var draw=new Draw(cobj,{width:lwidth,color:lcolor,type:type});
+        ox=e.offsetX;
+        oy=e.offsetY;
+        if(shape=="pencial"){
+            cobj.beginPath();
+            cobj.moveTo(ox+5,oy+25);
+        }
+        canvas.onmousemove = function (e) {
+            ow=e.offsetX;
+            oh=e.offsetY;
+            if(shape!="eraser"){
+                cobj.clearRect(0,0,900,640);
+                if(arr.length!=0){
+                    cobj.putImageData(arr[arr.length-1],0,0,0,0,900,640);
+                }
+            }
+            if(cutflag){
+                if(!copyflag){
+                    cobj.clearRect(lox-1,loy-1,low-lox+2,loh-loy+2);
+                }
+                var nx=lox+ow-ox;
+                var ny=loy+oh-oy;
+                cobj.putImageData(cutdata,nx,ny);
+            } else if (shape=="poly"){
+                draw[shape](ox,oy,ow,oh,pnum);
+            }else if(shape=="eraser"){
+                draw[shape](ox,oy,ow,oh,lsize);
+            } else{
+                draw[shape](ox,oy,ow,oh);
+            }
+        }
+        canvas.onmouseup=function () {
+            canvas.onmousemove=null;
+            canvas.onmouseup=null;
+            arr.push(cobj.getImageData(0,0,900,640));
+            if(shape=="cut"){
+                if(cutflag==false){
+                    cutflag=true;
+                    cutdata=cobj.getImageData(ox+1,oy+1,ow-ox-2,oh-oy-2);
+                    lox=ox;loy=oy;low=ow;loh=oh;
+                    toolbox.style.display="none";
+                }else{
+                    cutflag=false;
+                    copy=false;
+                    toolbox.style.display="block";
+                }
+            }
+        }
+    }
+
+</script>
+</html>

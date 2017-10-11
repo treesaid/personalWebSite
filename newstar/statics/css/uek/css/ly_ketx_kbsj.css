@@ -1,0 +1,231 @@
+body{
+    font-family:Microsoft yahei;
+    background:#FAFAFA;
+}
+.ly-container{
+    width:1200px;
+    margin:0 auto;
+}
+.ly-container:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+/******************面包屑导航***************/
+.ly-navagation-box{
+    width:100%;
+    height:24px;
+    padding:20px 0;
+}
+.ly-navnavagation{
+    width:100%;
+    height:20px;
+    font-size:18px;
+}
+.ly-con{
+    float:left;
+    height:100%;
+    margin-right:10px;
+}
+.ly-con a,.ly-con span{
+    color:#666666;
+}
+.ly-con a:hover{
+    color:#01B5FF;
+}
+.ly-con-active a{
+    color:#01B5FF;
+}
+/******************左侧L型导航***************/
+.ly-nav-l{
+    float:left;
+    width:238px;
+    min-height:593px;
+    padding:0 30px;
+    background:#FFFFFF;
+    border:1px solid #E8E8E8;
+    border-top:2px solid #94D43B;
+}
+/******左侧标题部分*******/
+.ly-nav-lt{
+    width:100%;
+    padding:25px 0;
+    font-size:20px;
+}
+/*英文标题*/
+
+.ly-nav-lt-en{
+    color:#B8B8B8;
+}
+
+/*中文标题*/
+.ly-nav-lt-cn{
+    color:#585858;
+}
+/******装饰线*******/
+.ly-nav-l-line{
+    width:100%;
+    height:1px;
+    background:rgba(0,0,0,0.1);
+    position:relative;
+}
+.ly-nav-l-line:before{
+    content:"";
+    display:block;
+    width:3px;
+    height:3px;
+    background:rgba(0,0,0,0.3);
+    border-radius:50%;
+    position:absolute;
+    left:0;
+    top:-1px;
+}
+.ly-nav-l-line:after{
+    content:"";
+    display:block;
+    width:3px;
+    height:3px;
+    background:rgba(0,0,0,0.3);
+    border-radius:50%;
+    position:absolute;
+    right:0;
+    top:-1px;
+}
+/******内容区*******/
+.ly-nav-l-con-box{
+    width:100%;
+    margin-top:20px;
+}
+.ly-nav-l-con-lis{
+    margin-bottom:17px;
+}
+.ly-nav-l-con-caption{
+    width:auto;
+    font-size:18px;
+    position: relative;
+    padding-left:17px;
+}
+.ly-nav-l-con-caption span{
+    position:absolute;
+    font-size:20px;
+    color:#FFDA1A;
+    left:0;
+    top:-4px;
+    font-weight:bold;
+}
+.ly-nav-l-con-caption a{
+    color:#000000;
+}
+.ly-nav-l-con-caption a:hover{
+    color:#01B5FF;
+}
+.ly-nav-l-con{
+    width:100%;
+    margin-top:18px;
+}
+/******************右侧内容区**************/
+.ly-right-box{
+    box-sizing:border-box;
+    float:right;
+    width:888px;
+    background: #FFF;
+    border:1px solid #E8E8E8;
+    border-top:2px solid #94D43B;
+    padding:30px 50px;
+}
+/*一个模版*/
+.ly-class{
+    float:left;
+    width:288px;
+    height:533px;
+    border:1px solid #434343;
+    position:relative;
+    padding:0 30px;
+    margin-top:20px;
+}
+.ly-class-nopre{
+    float:right;
+}
+/*标题*/
+.ly-class-title{
+    height:20px;
+    border:1px solid #434343;
+    position:absolute;
+    margin-top:-23px;
+    left:50%;
+    margin-left:-110px;
+    background: #FFF;
+    padding:13px 20px;
+    font-size:18px;
+    color:#1E2226;
+}
+.ly-class-title_two{
+    margin-left:-125px;
+}
+.ly-class-title span{
+    display:inline-block;
+    width:2px;
+    height:16px;
+    background:#717274;
+    margin:0 9px;
+}
+/*图片*/
+.ly-class-img-box{
+    width:287px;
+    height:221px;
+    margin-top:40px;
+    background: #707070;
+    border:1px solid #BFBFBF;
+}
+.ly-class-img-box img{
+    width:100%;
+    height:100%;
+    border:0;
+}
+/*一段文字*/
+.ly-class-des{
+    width:100%;
+    height:100px;
+    margin-top:20px;
+    padding:6px 0;
+    font-size:14px;
+    color:#1E2226;
+    line-height:1.5;
+}
+/*开班时间*/
+.ly-class-kbsj{
+    width:100%;
+    padding:10px 0;
+    margin-top:6px;
+}
+.ly-class-kbsj span{
+    display:block;
+    font-size:14px;
+    color:#01B5FF;
+    margin-bottom:8px;
+}
+/*预约报名*/
+.ly-class-bm{
+    width:125px;
+    height:35px;
+    border:1px solid #00affe;
+    margin:7px auto;
+    font-size:18px;
+    color:#00affe;
+    border-radius:30px;
+    text-align: center;
+    line-height:35px;
+    cursor:pointer;
+    transition:all 400ms;
+    position:relative;
+}
+.ly-class-bm a{
+    display:block;
+    width:100%;
+    height:100%;
+    position:absolute;
+}
+.ly-class-bm:hover{
+    background: #00affe;
+    color:#FFF;
+}

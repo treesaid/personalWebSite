@@ -1,0 +1,152 @@
+
+/********  课程设置--就业薪资--列表页  ************/
+
+/*第一部分*/
+.ljg-section-1{
+    width:100%;
+    height:auto;
+    color:#1E2226;
+}
+.ljg-section-num{
+    width:48px;
+    height:44px;
+    border:1px solid #434343;
+    margin:0 auto;
+    line-height: 44px;
+    text-align: center;
+    font-size:36px;
+}
+.ljg-section-title{
+    text-align: center;
+    font-size: 20px;
+    margin:20px 0 30px 0;
+}
+.ljg-section-1 p{
+    line-height:24px;
+    font-size: 14px;
+    margin-bottom:30px;
+}
+.ljg-section-1-pic{
+    width:100%;
+    height:400px;
+    margin-bottom: 30px;
+    background:url("../../../images/uek/images/ljg_images/ljg-pic.png") no-repeat center center/100%;
+}
+
+/*第二部分*/
+.ljg-explain{
+    width:100%;
+    height:auto;
+}
+/*颜色*/
+.ljg-explain-color{
+    box-sizing: border-box;
+    width:100%;
+    height:60px;
+    border:1px solid #434343; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.ljg-explain-color li{
+    width:60px;
+    height:20px;
+    border-radius: 20px;
+}
+.ljg-color-1{
+    background:#5C933F;
+}
+.ljg-color-2{
+    background:#939393;
+}
+.ljg-color-3{
+    background:#D9A515;
+}
+.ljg-color-4{
+    background:#3C5FA2;
+}
+.ljg-color-5{
+    background:#D3504F;
+}
+.ljg-color-6{
+    background:#95B5DD;
+}
+.ljg-color-7{
+    background:#C0C0C0;
+}
+
+/*文字*/
+.ljg-explain-text{
+    box-sizing: border-box;
+    width:100%;
+    height:60px;
+    border:1px solid #434343; 
+    border-top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.ljg-explain-text li{
+    width:60px;
+    height:20px;
+    line-height: 20px;
+    text-align: center;
+    color:#1E2226;
+    font-size: 16px;
+}
+/*图表*/
+.ljg-chart-container{
+    box-sizing: border-box;
+    width:100%;
+    height:auto;
+    border-top:1px solid #434343; 
+    border-left:1px solid #434343;
+    margin-top:30px; 
+}
+.ljg-chart-container li{
+    box-sizing: border-box;
+    float: left;
+    width:50%;
+    height:auto;
+    border-right:1px solid #434343; 
+    border-bottom:1px solid #434343;
+}
+.ljg-chart-pic-container{
+    width:100%;
+    height:330px;
+    position:relative;
+}
+.ljg-chart-pic{
+    width:283px;
+    height:283px;
+    border-radius: 50%;
+    margin:0 auto;
+    margin-top: 20px;
+    overflow: hidden;
+    background:#ccc;
+}
+.ljg-chart-pic img{
+    width:100%;
+}
+.ljg-chart-pic-container p{
+    width:100%;
+    line-height: 24px;
+    font-size: 16px;
+    text-align: center;
+    margin-top:10px;
+}
+/*文字*/
+.ljg-chart-text{
+    width:100%;
+    height:69px;
+    border-top: 1px solid #434343; 
+    line-height: 70px;
+    text-align:center;
+    font-size: 16px;
+}
+.ljg-chart-text strong{
+    font-weight: bold;
+    color:#01B5FF;
+    font-size: 20px;
+    margin-right:15px;
+}

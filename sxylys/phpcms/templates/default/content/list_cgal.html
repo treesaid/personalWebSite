@@ -1,0 +1,57 @@
+    {template "content","myheader"}
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}sxylys/css/limai.css" />
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}sxylys/css/product_show.css" />
+    <!-- ************ 主体部分 ************* -->
+    <div class="list-main">
+        <div class="lm-nav">
+            <a href="{$CATEGORYS[9][url]}" class="lm-product">成功案例</a>
+            <div class="lm-line"></div>
+            <!-- <div class="lm-last">藜麦</div> -->
+            <div class="more">
+                <div class="more-icon"></div>
+                <a href="#">查看全部</a>
+            </div>
+        </div>
+        <!-- 产品图文列表 -->
+
+        <ul class="cgal">
+            {pc:content  action="lists" catid="$catid" num="10" siteid="$siteid" order="listorder ASC"}
+            {php $i=0}
+            {loop $data $v}
+            {php $i++}
+            <li{if $i%2==0} class="border-right"{/if}>
+                <a href="{$v[url]}"><img src="{$v[thumb]}" alt="" /></a>
+            </li>
+            <!-- <li><img src="" alt="" /></li> -->
+            {/loop}
+            {/pc}
+        </ul>
+        
+    </div><!-- *************** 主体部分结束 *********-->
+
+    <!-- 右侧侧边栏 -->
+    <!-- 遮罩 -->
+    <div class="side-mask mask-hide"></div>
+    <div class="side-box side-hide">
+        <div class="side">
+            <div class="side-title">成功案例</div>
+            <ul class="side-list">
+                {pc:content  action="category" catid="$top_parentid" num="10" siteid="$siteid" order="listorder ASC"}
+                {loop $data $v}
+                <li>
+                    <a href="{$v[url]}">
+                        <div class="side-gt"><img src="{IMG_PATH}sxylys/img/win2.png" alt="" /></div>
+                        <div class="side-text">{$v[catname]}</div>
+                    </a>
+                </li>
+                <li class="side-line"></li>
+                {/loop}
+                {/pc}
+            </ul>
+        </div> <!-- 右侧侧边栏结束 -->
+        <!-- 返回键 -->
+        <div class="side-back"><img src="{IMG_PATH}sxylys/img/win2.png" alt="" /></div>
+    </div>
+
+    {template "content","myfooter"}
+    <script type="text/javascript" src="{JS_PATH}sxylys/js/limei.js"></script>

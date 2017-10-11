@@ -1,0 +1,50 @@
+  <!-- ***********左侧L型导航  l************* -->
+        <div class="ly-nav-l">
+            <!-- 头部 t-->
+            <div class="ly-nav-lt">
+                <div class="ly-nav-lt-en"><strong>ELITE</strong> <span>STUDENT</span></div>
+                <div class="ly-nav-lt-cn"><strong>精英</strong><span>学子</span></div>
+            </div>
+            <!-- 装饰线 -->
+            <div class="ly-nav-l-line"></div>
+            <!-- 内容区 -->
+            <div class="ly-nav-l-con-box">
+                
+                <!-- 下方开始循环 -->
+                {pc:content action="category" catid="$top_parentid"}
+                {loop $data $r}
+                <div class="ly-nav-l-con-lis">
+                    <h1 class="ly-nav-l-con-caption">
+                       <span>·</span>
+                        <a href="javascript:">{$r[catname]}</a>
+                    </h1>
+                    {pc:content action="category" catid="$r[catid]"}
+                    <ul class="ly-nav-l-con">
+                    {php $i=0}
+                        {loop $data $v}
+                        <!-- {php var_dump($i)} -->
+                        <!-- {php var_dump($catid)}
+                        {php var_dump($parentid)}
+                        {php var_dump($catname)}
+                        {php var_dump($CATEGORYS[$r[catid]][catname])} -->
+                        {if $catname==$CATEGORYS[$r[catid]][catname]}
+                        <li class="ly-nav-l-con-li">
+                            <i {if $i==0}class="ly-left-con-1 ly-left-con-2"{else} class="ly-left-con-1"{/if}></i>
+                            <a href="{$v[url]}" {if $i==0}class="ly-nav-l-li-active"{/if}>{$v[catname]}</a>
+                        </li>
+                        {else}
+                        <li class="ly-nav-l-con-li">
+                            <i class="ly-left-con-1 "></i>
+                            <a href="{$v[url]}" class="">{$v[catname]}</a>
+                        </li>
+                        {/if}
+                        {php $i++}
+                        {/loop}
+                    </ul>
+                    {/pc}
+                </div>
+                {/loop}
+                {/pc}
+
+            </div>
+        </div>

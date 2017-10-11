@@ -1,0 +1,29 @@
+/* 
+* @Author: Marte
+* @Date:   2016-11-20 17:43:36
+* @Last Modified by:   Marte
+* @Last Modified time: 2016-12-16 01:54:21
+*/
+/*按钮*/
+.tab-btn-lis{
+    border-top:2px solid transparent!important;
+}
+.tab-btn-lis-active{
+    border-color:#01B5FF!important;
+}
+.tab-btn-lis:hover{
+    border-color:#01B5FF!important;
+}
+.tab-btn-lis-active a{
+    color:#01B5FF!important;
+}
+.tab-btn-lis a:hover{
+    color:#01B5FF!important;
+}
+/*内容*/
+.tab-con-lis{
+    display:none;
+}
+.tab-con-lis-active{
+    display:block;
+}

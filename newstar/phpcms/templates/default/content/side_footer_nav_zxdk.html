@@ -1,0 +1,30 @@
+<!--*********  二级页面左边导航开始 *************** -->
+            <div class="xjn-lside">
+                <div class="xjn-title">
+                    <h4 class='xjn-titeng'><span>STUDENT</span> LOAN</h4>
+                    <h3 class='xjn-titchn'><span>助学</span>贷款</h3>
+                </div>
+                <div class="xjn-line"></div>
+                <ul class="xjn-catlist">
+                    <li class="xjn-list{if $catid==78} active{/if}">
+                        <a href="{$CATEGORYS[78][url]}"><span>·</span>就业前景</a>
+                    </li>
+                    <li class="xjn-list{if $catid==79} active{/if}">
+                        <a href="{$CATEGORYS[79][url]}"><span>·</span>就业报告</a>
+                    </li>
+                    {pc:content action="lists" catid=86}
+                    {loop $data $v}
+                        <li class="xjn-list{if $catid==86} active{/if}">
+                            <a href="{$v[url]}"><span>·</span>助学贷款</a>
+                        </li>
+                    {/loop}
+                    {/pc}
+                    <li class="xjn-list{if $catid==81} active{/if}">
+                        <a href="{$CATEGORYS[81][url]}"><span>·</span>免费体验</a>
+                    </li>
+                    <li class="xjn-list{if $catid==82} active{/if}">
+                        <a href="{$CATEGORYS[82][url]}"><span>·</span>网站地图</a>
+                    </li>
+
+                </ul>
+             </div><!--*********  二级页面左边导航结束 ***************-->

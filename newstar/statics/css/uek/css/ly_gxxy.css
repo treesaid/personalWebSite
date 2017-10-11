@@ -1,0 +1,315 @@
+/*
+* @Author: Marte
+* @Date:   2016-11-19 09:38:18
+* @Last Modified by:   Marte
+* @Last Modified time: 2016-12-16 01:54:16
+*/
+body{
+    font-family:Microsoft yahei;
+    background:#FAFAFA;
+}
+.ly-container{
+    width:1200px;
+    margin:0 auto;
+}
+.ly-container:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+/******************面包屑导航***************/
+.ly-navagation-box{
+    width:100%;
+    height:24px;
+    padding:20px 0;
+}
+.ly-navnavagation{
+    width:100%;
+    height:20px;
+    font-size:18px;
+}
+.ly-con{
+    float:left;
+    height:100%;
+    margin-right:10px;  
+}
+.ly-con a,.ly-con span{
+    color:#666666;
+}
+.ly-con a:hover{
+    color:#01B5FF;
+}
+.ly-con-active a{
+    color:#01B5FF;
+}
+/******************左侧L型导航***************/
+.ly-nav-l{
+    float:left;
+    width:238px;
+    min-height:593px;
+    padding:0 30px;
+    background:#FFFFFF;
+    border:1px solid #E8E8E8;
+    border-top:2px solid #94D43B;
+}
+/******左侧标题部分*******/
+.ly-nav-lt{
+    width:100%;
+    padding:25px 0;
+    font-size:20px;
+}
+    /*英文标题*/
+
+.ly-nav-lt-en{
+    color:#B8B8B8;
+}
+
+    /*中文标题*/
+.ly-nav-lt-cn{
+    color:#585858;
+}
+/******装饰线*******/
+.ly-nav-l-line{
+    width:100%;
+    height:1px;
+    background:rgba(0,0,0,0.1);
+    position:relative;
+}
+.ly-nav-l-line:before{
+    content:"";
+    display:block;
+    width:3px;
+    height:3px;
+    background:rgba(0,0,0,0.3);
+    border-radius:50%;
+    position:absolute;
+    left:0;
+    top:-1px;
+}
+.ly-nav-l-line:after{
+   content:"";
+    display:block;
+    width:3px;
+    height:3px;
+    background:rgba(0,0,0,0.3);
+    border-radius:50%;
+    position:absolute;
+    right:0;
+    top:-1px;
+}
+/******内容区*******/
+.ly-nav-l-con-box{
+    width:100%;
+    margin-top:20px;
+}
+.ly-nav-l-con-lis{
+    
+}
+.ly-nav-l-con-caption{
+    width:auto;
+    font-size:18px;
+    position: relative;
+    padding-left:17px;
+}
+.ly-nav-l-con-caption span{
+    position:absolute;
+    font-size:20px;
+    color:#FFDA1A;
+    left:0;
+    top:-4px;
+    font-weight:bold;
+}
+.ly-nav-l-con-caption a{
+    color:#000000;
+}
+.ly-nav-l-con{
+    width:100%;
+    margin-top:18px;
+}
+.ly-nav-ul-active{
+    height:0;
+    overflow:hidden;
+}
+.ly-nav-l-con-li{
+    padding-left:18px;
+    margin:10px 0;
+    margin-left:37px;
+    position: relative;
+    font-size:16px;
+}
+.ly-nav-l-con-li a{
+    color:#666666;
+}
+.ly-nav-l-con-li a:hover{
+    color:#01B5FF;
+}
+.ly-nav-l-con-li .ly-nav-l-li-active{
+    color:#01B5FF;
+}
+.ly-left-con-1,.ly-left-con-2{
+    display:block;
+    width:13px;
+    height:13px;
+    position:absolute;
+    left:0;
+    top:2px;
+    background-image: url(../../../images/uek/images/ly_gxxy_imgs/ly-left-nav-1.png);
+}
+.ly-left-con-2{
+    background-image: url(../../../images/uek/images/ly_gxxy_imgs/ly-left-nav-2.png);
+}
+
+/******************右侧内容区**************/
+.ly-right-box{
+    float:right;
+    width:838px;
+    background: #FFF;
+    border:1px solid #E8E8E8;
+    border-top:2px solid #94D43B;
+    padding:0 30px 0 20px;
+}
+/******右侧内容顶部***********/
+.ly-right-head{
+    width:100%;
+    height:24px;
+    padding:28px 0;
+    font-weight:bold;
+}
+/*左侧*/
+.ly-right-head-left{
+    float:left;
+    height:100%;
+    padding-left:10px;
+    line-height:24px;
+}
+.ly-right-head-left a{
+    font-size:20px;
+    color:#01B5FF;
+    font-weight:bold;
+}
+/*右侧*/
+.ly-right-head-right{
+    float:right;
+    height:100%;
+    line-height:26px;
+}
+.ly-right-head-right li{
+    float:left;
+    color:#666666;
+    font-size:16px;
+    padding:0 2px;
+}
+.ly-right-head-right-li{
+     border-top:2px solid transparent;
+ }
+.ly-right-head-right-li:hover{
+    border-color:#01B5FF;
+}
+.ly-right-head-right-li a{
+	font-weight:normal;
+    color:#666666;
+}
+.ly-right-head-right-li a:hover{
+    color:#01B5FF;
+}
+.ly-right-head-right-li-active{
+    border-top:2px solid #01B5FF;
+}
+.ly-right-head-right-li-active a{
+    color:#01B5FF;
+}
+.ly-right-head-right-span{
+    float:left;
+    display:block;
+    margin:0 20px;
+}
+/***********右侧下方列表**********/
+.ly-right-con-box{
+    width:100%;
+}
+.ly-right-con-box-active{
+    display:none;
+}
+.ly-right-con{
+    float:left;
+    width:246px;
+    height:324px;
+    margin-bottom:30px;
+    padding:10px;
+    margin-right:10px;
+}
+.ly-right-con-active{
+    background-image:url(../../../images/uek/images/ly_gxxy_imgs/ly-right-border.png);
+    box-shadow:0 0 30px 0 rgba(0,0,0,0.1);
+    background-color:#FAFAFA;
+}
+/*头像*/
+.ly-right-con-photo{
+    display:block;
+    width:247px;
+    height:185px;
+    overflow: hidden;
+}
+.ly-right-con-photo img{
+    width:100%;
+}
+/*信息*/
+.ly-info{
+    width:227px;
+    height:119px;
+    padding-top:20px;
+    padding-left:20px;
+}
+/*姓名*/
+.ly-name{
+    margin-bottom:9px;
+    font-size:20px;
+}
+.ly-name a{
+    color:#000000;
+}
+/*职业*/
+.ly-job{
+    font-size:14px;
+    height:24px;
+    margin-bottom:9px;
+}
+.ly-job a{
+    display:inline-block;
+    height:100%;
+    color:#444444;
+    border-bottom:1px dotted #444444;
+}
+/*专业*/
+.ly-salary{
+    font-size:18px;
+    color:#94D43B;
+    margin-bottom:9px;
+}
+.ly-salary-active{
+    color:#01B5FF;
+}
+.ly-salary span{
+    font-size:16px;
+}
+.ly-info p{
+    font-size:14px;
+    color:#444;
+}
+
+
+.tab-con-lis{
+    display:none;
+}
+.tab-con-lis-active{
+    display:block;
+}
+/**************翻页***************/
+.ly-page-box{
+    width:1200px;
+    margin:0 auto;
+}
+.ly-page{
+    width:890px;
+    float:right;
+}

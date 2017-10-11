@@ -1,0 +1,19 @@
+{template "content","uek_nav"}
+{template "content","uek_inside_banner"} 
+        <link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/xyz_about.css" />       
+        <!-- **************** 关于我们 *********** -->
+        {pc:content action="lists" catid="$catid" num="1" moreinfo="1"}
+        <div class="xyz-about-box">
+            <!-- ******* 标题 ******** -->
+            <h1 class="xyz-about-title">{$title}</h1>
+            <!-- *** 关于我们静态图片 *** -->
+            <!-- <div class="xyz-about-img">
+                <img src="{$v[thumb]}" alt="" />
+            </div> -->
+            <!-- **** 内容 ***** -->
+            <div class="xyz-about-content">
+                <p>{$content}</p>
+            </div>
+        </div><!--******** 关于我们结束 ***********-->
+        {/pc}
+{template "content","uek_footer"}

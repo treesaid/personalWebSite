@@ -1,0 +1,59 @@
+{template "content","uek_nav"}
+{template "content","uek_inside_banner"}
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/xjn_xwzx.css" />
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/xjn_kcjs.css" />
+<div class="xjn-container">
+        <!-- ************* 内页公共样式左边开始 ******************** -->
+        <!-- 面包屑导航开始 -->
+        <div class="xjn-mbxnav">
+            <a href="{siteurl($siteid)}" class='xjn-home'>首页</a>
+            <span>&gt;</span>
+            <a href="{$CATEGORYS[9][url]}" class='xjn-category'>{$CATEGORYS[9][catname]}</a>
+        </div><!-- 面包屑导航结束 -->
+
+        <div class="xjn-content">
+        {template  "content","side_kcjs_nav"}
+             <!-- ****************** 右边内容开始 ******************* -->
+    <div class="xjn-rside">
+        <!-- ************** 学习阶段开始 *************** -->
+        {pc:content action="lists" catid="$catid" num="5" order="id ASC" moreinfo="1"}
+        {loop $data $r}
+        <div class="xjn-step">
+            <div class="xjn-step-box">
+                <span class="xjn-step-num">0{$n}</span>
+                <h3 class="xjn-step-tit">软｜件｜阶｜段</h3>
+                <!-- 学习阶段内容开始 -->
+                <div class="xjn-step-con">
+                    <div class="xjn-conl"></div>
+                    <div class="xjn-conr">
+                        <!-- <p class="xjn-info xjn-ph">了解AI软件的基本功能及适用范围，区分AI软件与PS软件，一个是矢量
+       软件，一个是位图软件，让学员学会灵活交替运用两款软件绘制设计图;</p>
+                        <p class="xjn-info">学完此阶段可解决的现实问题</p>
+                        <p class="xjn-info xjn-text">
+                            1、将各类视觉技法应用到实际商业案例之中，<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;并初步涉及后期技术实现的知识;<br />2、用户习惯分析、未来发展趋势与应用范围;<br />3、 在技术允许的范围内如何进行视觉突破;<br />4、公司项目大概流程与分工(角色扮演);<br />5、增加UI设计中的交互应用，更好的研究用户体验需求。
+                        </p> -->
+                        {$r[content]}
+                    </div>
+                </div> <!-- 学习阶段内容结束 -->
+                <!-- 阶段底部 -->
+                <!-- <div class="xjn-step-bot">
+                    <p class="xjn-text xjn-gray">学完此阶段可拥有的市场价值</p>
+                    <p class="xjn-text">熟练掌握和学习后，可满足设计行业的初级需求，根据市场反馈数据看，就业面广，薪资普遍较高</p>
+                </div><! 阶段底部 --> 
+            </div>
+            <!-- 箭头 -->
+            <div class="xjn-jiantou">
+                    <img src="{IMG_PATH}uek/images/xjn_img/xjn-jiantou.png" alt="" />
+            </div>
+        </div><!-- ************** 学习阶段结束 *************** -->
+        {/loop}
+        {/pc}
+        <!-- ************** 学习阶段开始 *************** -->
+    </div>
+             
+        </div>
+    </div>
+{template "content","uek_footer"}
+</body>
+</html>

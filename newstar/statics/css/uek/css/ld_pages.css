@@ -1,0 +1,89 @@
+/*翻页*/
+.ld-pagebox{
+    width: 600px;
+    margin:0 auto;
+    padding:0 78px;
+    overflow:hidden;
+}
+.ld-pages {
+    float:left;
+    height: 32px;
+    margin:0 auto;
+    text-align: center;
+    line-height: 70px;
+    padding:25px 0;
+    color: #555;
+    font-size: 13px;
+}
+.ld-pages .a1{
+    float:left;
+    width:59px;height:32px;
+    background:url(../../../images/uek/images/ld_images/ld-pages.png) -10px -104px no-repeat;
+}
+.ld-pages .a1.ld-next{
+    background:url(../../../images/uek/images/ld_images/ld-pages.png) -86px -104px no-repeat;
+}
+.ld-pages a{
+    float:left;
+   
+}
+.ld-pages a,.ld-gobtn{
+    width:34px;height:45px;
+    margin-left:13px;
+    display:inline;
+    font-size:14px;
+    color:#000;
+    text-align:center;line-height:32px;
+    background:url(../../../images/uek/images/ld_images/ld-pages.png) -9px -10px no-repeat;
+    cursor:pointer;
+}
+.ld-gobtn{
+    float:right;
+    outline:none;border:0;
+    margin:0;
+    line-height:32px!important;
+}
+.ld-pages a:hover,.ld-gobtn:hover{
+    color:#fff;
+    line-height:32px;
+    background:url(../../../images/uek/images/ld_images/ld-pages.png) -110px -10px no-repeat;
+}
+.ld-gobtn:hover{text-indent: 1px;}
+.ld-pages .a1.ld-next:hover{
+    background:url(../../../images/uek/images/ld_images/ld-pages.png) -86px -104px no-repeat;
+}
+.ld-pages .a1:hover{
+    float:left;
+    width:59px;height:32px;
+    background:url(../../../images/uek/images/ld_images/ld-pages.png) -10px -104px no-repeat;
+}
+.ld-pages span{
+    float:left;
+    width:34px;height:45px;
+    margin-left:15px;
+    display:inline;
+    color:#fff;
+    line-height:32px;
+    background:url(../../../images/uek/images/ld_images/ld-pages.png) -109px -10px no-repeat;
+}
+/*右侧跳转*/
+.ld-tiaozhuan{
+    float:right;
+    width:170px;height: 32px;
+    line-height:32px;
+    padding:25px 0;
+    font-size:14px;
+    color:#000;
+}
+.ld-goleft{
+    float:left;
+}
+.ld-input{
+    width:59px;height:32px;
+    line-height:32px;
+    border:0;outline: none;
+    margin:0 4px;
+    text-indent:10px;
+    vertical-align: middle;
+    background:url(../../../images/uek/images/ld_images/ld-pages.png) -10px -58px no-repeat;
+}

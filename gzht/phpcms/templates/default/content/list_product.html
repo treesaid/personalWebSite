@@ -1,0 +1,56 @@
+{template "content","myheader"}
+<link rel="stylesheet" href="{CSS_PATH}mycss/product.css">
+	<!-- banner -->
+	<div class="banner">
+		<img src="{IMG_PATH}img/bannerpic.jpg" alt="">
+	</div>
+	<!-- 品牌介绍 -->
+	<div class="intro">
+		<div class="intro-left"> 
+			<ul>
+				<li>  
+					<a href="#">2014春夏款
+						<img src="{IMG_PATH}img/up.png" alt="" class="line">
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="intro-right">
+			<div class="title">
+				<p class="intro-p">产品展示<span>PRODUCTS</span></p>
+				<div class="weizhi">
+					<a href="../homepage.html">首页</a>
+					<span>&gt; 产品展示</span>
+				</div>
+			</div>
+			<div class="art">
+				<ul class="pro">
+					{pc:content action="lists" catid="$catid" num="9" page="$page" order="id ASC" moreinfo="1"}
+					{loop $data $r}
+					<li class="proli">
+						<a href="{$r[url]}" class="pro-img">
+							<img src="{$r[thumb]}" alt="">
+						</a>
+						<p class="xinghao">
+							<a href="{$r[url]}">{$r[title]}</a>
+						</p>
+					</li>
+					{/loop}
+									
+				</ul>
+				<p class="page"> 
+				{$pages}  
+					<!-- <a href="#">首页</a>
+					<a href="#">上一页</a>
+					<a href="#">1</a>
+					<a href="product2.html">2</a>
+					<a href="product3.html">3</a>
+					<a href="product2.html">下一页</a>
+					<a href="product3.html">尾页</a>
+					<a>1/3页</a> -->
+				</p>
+				{/pc}	
+			</div>
+		</div>
+	</div>
+{template "content","myfooter"}

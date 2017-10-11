@@ -1,0 +1,40 @@
+
+
+var ctrl=angular.module('ctrl',["ngSanitize"]);
+ctrl.controller('home',function($scope,$http){
+	$http({
+    url:'php/api.php?url=https://news-at.zhihu.com/api/4/news/latest',
+    method:'get',
+    responseType:'json'
+  }).then(function(res){
+    $scope.list=res.data.stories;
+  })
+});
+ctrl.controller('show',function($scope,$http,$routeParams){
+  $http({
+    url:'php/api.php?url=http://news-at.zhihu.com/api/4/news/'+$routeParams.id,
+    method:'get',
+    responseType:'json'
+  }).then(function(res){
+    console.log(res.data)
+    $scope.d=res.data;
+  })
+});
+ctrl.controller('theme',function($scope,$http){
+  $http({
+    url:'php/api.php?url=http://news-at.zhihu.com/api/4/themes',
+    method:'get',
+    responseType:'json'
+  }).then(function(res){
+    $scope.theme=res.data.others;
+  })
+});
+ctrl.controller('themeList',function($scope,$http,$routeParams){
+  $http({
+    url:'php/api.php?url=http://news-at.zhihu.com/api/4/theme/'+$routeParams.id,
+    method:'get',
+    responseType:'json'
+  }).then(function(res){
+    $scope.list=res.data.stories;
+  })
+});

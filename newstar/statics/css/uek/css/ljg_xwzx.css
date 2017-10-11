@@ -1,0 +1,402 @@
+
+
+/********************  背景色  ***********************/
+body{
+    background:#FAFAFA;
+}
+
+
+/********************  详情内容  ***********************/
+.ljg-details-container{
+    box-sizing: border-box;
+    width:1200px;
+    height:auto;
+    padding:28px 29px 40px 29px;
+    background:#fff;
+    border:1px solid #E8E8E8;
+    border-top:2px solid #94D43B;
+    margin:0 auto;
+    margin-top: -30px;
+    margin-bottom: 30px;
+    position:relative;
+    z-index:1000000;
+}
+
+/*****************  面包屑 *********************/
+
+.ljg-crumbs a{
+    font-size:18px;
+    color:#000;
+}
+.ljg-crumbs em{
+    font-size:18px;
+    color:#000;
+    font-style:normal;
+}
+.ljg-crumbs .ljg-index{
+    color:#58C5FF;
+}
+.ljg-crumbs a:hover{
+    color:#58C5FF;
+}
+
+
+/**************  文章  *****************/
+.ljg-content-container{
+    box-sizing:border-box;
+    width:100%;
+    height:auto;
+    padding:33px 73px 0 66px;
+}
+
+/********  文章标题 ********/
+.ljg-article-title h1{
+    text-align:center;
+    font-size:24px;
+    color:#000;
+    margin-bottom:20px;
+}
+.ljg-article-title h2{
+    text-align:center;
+    font-size:20px;
+    color:#000;
+    margin-bottom:30px;
+}
+
+/********  文章信息 ********/
+.ljg-article-info{
+    text-align: center;
+    vertical-align: middle;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.ljg-article-info .ljg-line{
+    display:inline-block;
+    vertical-align: middle;
+    width:190px;
+    height:1px;
+    background:#D3D3D3;
+}
+.ljg-article-info .ljg-info-text{
+    vertical-align: middle;
+    font-size: 12px;
+    color:#8F8F8F;
+}
+.ljg-article-info .ljg-info-text:before{
+    content:"";
+    display:inline-block;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#ccc;
+}
+.ljg-article-info .ljg-info-browse{
+    margin-left:28px;
+    margin-right:8px;
+}
+.ljg-article-info .ljg-info-date{
+    margin-left:8px;
+    margin-right:28px;
+}
+/********  文章内容 ********/
+.ljg-article-content{
+    height:auto;
+    padding:36px 0;
+    font-size:14px;
+    color:#787878;
+    line-height:28px;
+}
+/**************  你可能感兴趣的问题 *****************/
+.xjn-interest{
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    /*padding: 33px 73px 0 66px;*/
+}
+.xjn-inter-title{
+    padding-bottom:18px;
+    padding-top:18px;
+    border-bottom:2px solid #EDEDED;
+    /*border-top:2px solid #EDEDED;*/
+}
+.xjn-inter-title strong{
+    font-size:20px;
+    color:#000;
+}
+.xjn-inter-title b{
+    font-size:20px;
+    color:#02B5FF;
+    margin:0 10px;
+}
+.xjn-inter-title span{
+    font-size:14px;
+    color:#999;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.xjn-artlist{
+    width:100%;
+    height:auto;
+    padding-top: 24px;
+}
+.xjn-artlist .xjn-art{
+    width:100%;
+    height:24px;
+    margin-bottom: 15px;
+}
+.xjn-artlist .xjn-art a{
+    font-size: 14px;
+    color:#000;
+    line-height: 24px;
+}
+.xjn-artlist .xjn-art a:hover{
+    color:#01B5FF;
+}
+/**************  最新评论  *****************/
+/**********  标题 ***********/
+.ljg-content-title{
+    padding-bottom:18px;
+    border-bottom:2px solid #EDEDED;
+}
+.ljg-content-title strong{
+    font-size:20px;
+    color:#000;
+}
+.ljg-content-title b{
+    font-size:20px;
+    color:#02B5FF;
+    margin:0 10px;
+}
+.ljg-content-title span{
+    font-size:14px;
+    color:#999;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.ljg-content-title a{
+    float: right;
+    font-size:14px;
+    color:#01B5FF;
+    display:inline-block;
+    padding-bottom: 2px;
+    border-bottom:1px solid transparent;
+}
+.ljg-content-title a:hover{
+    border-bottom:1px solid #01B5FF;
+}
+
+/**********  评论列表 ***********/
+.ljg-comment-list{
+    height:auto;
+    padding-top:33px;
+}
+.ljg-comment-ul{
+    height:auto;
+}
+.ljg-comment-ul li{
+    height:auto;
+    margin-bottom:33px;
+}
+/********  头像 ********/
+.ljg-comment-portrait{
+    float: left;
+    width:83px;
+    height:83px;
+}
+.ljg-comment-portrait a{
+    display:block;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+.ljg-comment-portrait a img{
+    width:100%;
+}
+
+/********  内容 ********/
+.ljg-comment-content{
+    box-sizing: border-box;
+    float: right;
+    width:890px;
+    height:auto;
+    background:#FAFAFA;
+    border-radius:10px;
+    padding:23px 20px 23px 35px;
+    position:relative;
+}
+.ljg-comment-content:before{
+    content:"";
+    display:block;
+    width:0;
+    height:0;
+    border-top:8px solid transparent;
+    border-right:10px solid #FAFAFA;
+    border-bottom:8px solid transparent;
+    border-left:0;
+    position:absolute;
+    top:20px;
+    left:-10px;
+}
+.ljg-comment-inner{
+    width:100%;
+    height:auto;
+    padding-bottom:12px;
+    position:relative;
+}
+/*用户信息*/
+.ljg-comment-info{
+    margin-bottom:10px;
+}
+.ljg-comment-info a{
+    font-size:18px;
+    color:#01B5FF;
+    font-weight:bold;
+    display:inline-block;
+    padding-bottom: 2px;
+    border-bottom:1px solid transparent;
+}
+.ljg-comment-info a:hover{
+    border-bottom:1px solid #01B5FF;
+}
+.ljg-comment-info strong{
+    display:inline-block;
+    width:3px;
+    height:3px;
+    border-radius: 50%;
+    background:#997A61;
+}
+.ljg-comment-info span{
+    font-size:12px;
+    color:#8D8D8D;
+    font-weight: 500;
+}
+.ljg-comment-inner .ljg-comment-text{
+    padding-right:120px;
+    font-size: 14px;
+    color:#8D8D8D;
+    line-height:24px;
+}
+
+/********  显示楼层 ********/
+.lig-comment-floor{
+    width:40px;
+    height:40px;
+    position:absolute;
+    right:0;
+    bottom:0;
+}
+.lig-comment-floor .ljg-floor-num{
+    font-size:14px;
+    color:#A6A6A6;
+    font-weight:bold;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.lig-comment-floor .ljg-floor-text{
+    font-size:14px;
+    color:#A6A6A6;
+    font-weight:bold;
+    position:absolute;
+    right:0;
+    bottom:0;
+}
+.lig-comment-floor .ljg-floor-line{
+    /*width:42px;
+    height:2px;
+    background:#A6A6A6;
+    transform:rotate(-45deg);*/
+    width:38px;
+    height:38px;
+    background:url(../../../images/uek/images/ljg_images/ljg-floor-line.png) no-repeat center center;
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    margin:auto;
+}
+
+/**************  留言板  *****************/
+/**********  内容 ***********/
+.ljg-message-content{
+    height:auto;
+    margin-top:20px;
+    position:relative;
+}
+/******  添加 *******/
+.ljg-message-add{
+    width:140px;
+    height:140px;
+    border-radius: 10px;
+    background:url("../../../images/uek/images/ljg_images/ljg-message-add.png") no-repeat center center #EBEBEB;
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:100;
+    cursor:pointer;
+}
+/******  输入 *******/
+.ljg-message-input-container{
+    float: right;
+    box-sizing: border-box;
+    width:985px;
+    height:auto;
+    background:#FAFAFA;
+    border:1px solid #EBEBEB;
+    border-radius: 10px;
+    padding:70px 40px 30px 155px;
+    margin-top:30px;
+}
+.ljg-message-input-container input{
+    width:100%;
+    height:23px;
+    padding-bottom:12px;
+    border:none;
+    background:transparent;
+    border-bottom: 2px solid #D7D7D7;
+    outline: none;
+    font-size:22px;
+    color:#8D8D8D;
+    font-family: "Microsoft yahei";
+    font-weight: normal;
+}
+.ljg-message-input-container input::-webkit-input-placeholder{
+    color:#dadada;
+    font-style:italic;
+}
+.ljg-message-input-container input::-moz-input-placeholder{
+    color:#dadada;
+    font-style:italic;
+}
+.ljg-message-input-container input::-ms-input-placeholder{
+    color:#dadada;
+    font-style:italic;
+}
+/**********  提示 ***********/
+.ljg-message-prompt{
+    margin-left:20px;
+    margin-top:16px;
+    font-size:14px;
+    color:#D8D8D8;
+}
+.ljg-message-prompt span{
+    color:#31C5FC;
+}
+/**********  提交 ***********/
+.ljg-message-submit{
+    float: right;
+    width:158px;
+    height:34px;
+    background:#01B5FF;
+    border-radius: 20px;
+    line-height: 34px;
+    text-align: center;
+    font-size:16px;
+    color:#fff;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+

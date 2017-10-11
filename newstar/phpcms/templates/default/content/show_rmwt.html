@@ -1,0 +1,90 @@
+{template "content","uek_nav"}
+{template "content","uek_inside_banner"}
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/ld_pages.css" />
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/ly_tab.css" />
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/ljg_xwzx.css"/>
+<link rel="stylesheet" type="text/css" href="{CSS_PATH}uek/css/previous_next.css" />
+<!-- ********************  详情内容  ***********************  -->
+        <div class="ljg-details-container">
+            <!-- **************  面包屑 *****************  -->
+            <div class="ljg-crumbs">
+                <a href="{$siteurl($siteid)}">首页</a>
+                <em>&gt;</em>
+                <a href="{$CATEGORYS[$parentid][url]}">{$CATEGORYS[$parentid][catname]}</a>
+                <em>&gt;</em>
+                <a href="javascript:;" class="ljg-index">文章详情</a>
+                <!-- <a href="{APP_PATH}">首页</a> > {catpos($catid)} -->
+
+            </div><!-- 面包屑结束 -->
+
+            <!-- **************  文章  *****************  -->
+            <div class="ljg-content-container ljg-article-container">
+                <!-- ********  文章标题 ******** -->
+                <div class="ljg-article-title">
+                    <h1>{$title}</h1>
+                    <h2>{$stitle}</h2>
+                </div><!-- 文章标题结束 -->
+
+                <!-- ********  文章信息 ******** -->
+                <div class="ljg-article-info">
+                    <!-- 左边线 -->
+                    <div class="ljg-line ljg-line-left"></div>
+                    <!-- 浏览量 -->
+                    <script src="{JS_PATH}uek/js/jquery.min.js"></script>
+                    <span class="ljg-info-text ljg-info-browse">
+                        <span id="hits"><script language="JavaScript" src="{APP_PATH}api.php?op=count&id={$id}&modelid={$modelid}"></script> </span>人浏览
+                    </span>
+                    <!-- 日期 -->
+                    <span class="ljg-info-text ljg-info-date">
+                        {$inputtime}
+                    </span>
+                    <!-- 右边线 -->
+                    <div class="ljg-line ljg-line-right"></div>
+                </div><!-- 文章信息结束 -->
+
+                <!-- ********  文章内容 ******** -->
+                <div class="ljg-article-content">
+                    {$content}
+                </div><!-- 文章内容结束 -->
+                <!-- **********  分享 *********** -->
+                    {template 'content','uek_share'}
+                   <!-- 分享结束 -->
+                <!-- 上一篇和下一篇 -->
+                <div class="ly-post-box">
+                    <div class="ly-post"><span>上一篇 : </span><a href="{$previous_page[url]}">{$previous_page[title]}</a></div>
+                    <div class="ly-post"><span>下一篇 : </span><a href="{$next_page[url]}">{$next_page[title]}</a></div>
+                </div><!-- 上一篇和下一篇结束-->
+                <!-- 你可能感兴趣的问题 -->
+                <div class="xjn-interest">
+                    <div class="xjn-inter-title"> 
+                        <strong>你可能感兴趣的问题<b>|</b><span>INTERESTING PROBLEMS</span></strong>
+                    </div>
+                    {pc:content action="relation" catid="$catid" num="5" keywords="$rs[keywords]"}
+<!--content指调用内容模块下数据，action指执行获取相关信息方法，catid设置所属栏目，num设置调用数量，keywords设置相关关键词-->
+                          {if $data}
+                          <div class="xjn-artlist">
+                               {loop $data $r}
+                                    <p class="xjn-art"><a href="{$r[url]}">{$r[title]}</a></p>
+                               {/loop}
+                          </div>
+                          {/if}
+                        {/pc}
+                      
+                </div>
+            </div><!-- 文章结束 -->
+
+            <!-- **************  最新评论  *****************  -->
+            {if $allow_comment && module_exists('comment')}
+                <iframe src="{APP_PATH}index.php?m=comment&c=index&a=init&commentid={id_encode("content_$catid",$id,$siteid)}&iframe=1" width="100%" height="100%" id="comment_iframe" frameborder="0" scrolling="no"></iframe>
+          {/if}  
+        </div><!-- 详情内容结束 -->
+
+{template "content","uek_footer"}
+</body>
+<script src="{JS_PATH}uek/js/ld_pages.js"></script>
+<script src="{JS_PATH}uek/js/ld_zxdk.js"></script>
+<script src="{JS_PATH}uek/js/ly_tab.js"></script>
+<script src="{JS_PATH}uek/js/ljg_xwzx.js"></script>
+<script src="{JS_PATH}uek/js/jquery.placeholder.min.js"></script>
+</html>
+    

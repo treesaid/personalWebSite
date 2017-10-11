@@ -1,0 +1,347 @@
+/* **********课程安排************ */
+.ld-kcdi{
+    width:100%;
+    background:#fafafa;
+    position:relative;
+}
+.ld-boxshadowdown{
+    width:100%;height:28px;
+    position:absolute;
+    top:-11px;left:0;
+    background:url(../../../images/uek/images/ld_images/ld-shadowdown.png) center 0 no-repeat;
+}
+.ld-boxshadowup{
+    width:100%;height:28px;
+    position:absolute;
+    bottom:-11px;left:0;
+    background:url(../../../images/uek/images/ld_images/ld-shadowup.png) center 0 no-repeat;
+}
+.ld-kccon{
+    width:1200px;
+    height:auto;
+    margin:0 auto;
+    padding:52px 0;
+}
+.ld-kccon:after{
+    display:block;
+    content:"";
+    clear:both;
+}
+.ld-lcright-di{
+    float:right;
+    width:875px;
+    border-left:1px dashed #01b5ff;
+    padding-left:110px;
+    margin-top:60px;
+}
+.ld-lcright{
+    float:right;
+    width:875px;
+    border-top:1px dashed #999;
+}
+/*处理多行、单行文本垂直居中*/
+.ld-lcright li{
+    width:100%;height:75px;
+    line-height:75px;
+    border-bottom:1px dashed #999;
+    position:relative;
+    *display:block!important;
+    display:table!important;
+}
+.ld-lc-rinner,.ld-leftin{
+    *position:absolute;
+    display:table-cell;
+    vertical-align:middle;
+    *display:block;
+}
+.ld-lc-rinner p{
+    font-size:16px;
+    color:#666;
+    line-height:26px;    
+}
+.ld-leftin p{
+    float:left;
+    width:260px;
+    line-height:28px;
+    font-size:24px;
+    color:#5c5c5c;
+    text-indent:15px;
+}
+
+/*课程安排左侧标题*/
+.ld-left-tit{
+    width:225px;height:28px;
+    line-height:28px;
+    font-size:24px;
+    color:#01b5ff;
+    position:absolute;
+    left:-325px;top:33%;
+}
+.ld-tit-wenzi{
+    float:right;
+    margin-right:10px;
+}
+.ld-tit-num{
+    float:right;
+    width:71px;height:100%;
+    margin-right:22px;
+    background:url("../../../images/uek/images/ld_images/ld-antit.png") 6px 1px no-repeat;
+}
+.ld-left-tit2 .ld-tit-num{
+    background-position:-77px 1px;
+}
+.ld-left-tit3 .ld-tit-num{
+    background-position:-153px 1px;
+}
+.ld-tit-dot{
+     float:right;
+    width:22px;height:100%;
+    background:url("../../../images/uek/images/ld_images/ld-antit.png") 0 -29px no-repeat;
+}
+
+
+/* *************免费试学************* */
+.ld-mfdi{
+    width:100%;height:362px;
+    background:#fff;
+    padding-top:68px;
+}
+.ld-mf{
+    width:1154px;height:294px;
+    margin:0 auto;
+    overflow:hidden;
+}
+.ld-mfcon li{
+    float:left;
+    width:200px;height:290px;
+    margin-right:44px;
+    margin-left:44px;
+    text-align:center;
+}
+.ld-mfcon img{
+    width:100%;
+}
+.ld-mfcon b{
+    display:block;
+    width:100%;height:25px;
+    text-align:center;line-height:25px;
+    font-size:24px;
+    color:#000;
+    font-weight:normal;
+    margin-top:64px;
+}
+
+/* *************姓名开始************* */
+.ldname-di{
+    width:100%;height:640px;
+    background:#fafafa;
+    position:relative;
+}
+.ldname-con{
+    width:850px;
+    margin:0 auto;
+    padding-top:150px;
+    overflow:hidden;
+    border-top:1px solid #fafafa;
+    position:relative;
+}
+.ldname-line{
+    float:left;
+    width:11px;
+    border-right:1px dashed #01b5ff;
+    margin-top:60px;
+}
+.ldname-line li{
+    width:22px;height:22px;
+    margin:29px 0 43px 0;
+    background:url("../../../images/uek/images/ld_images/ld-antit.png") 0 -32px no-repeat;
+}
+.ld-namebox{
+    float:right;
+    width:800px;
+    border-spacing: 0;
+    font-size:20px;
+}
+.ld-namebox tr{
+    height:65px;
+    text-transform:uppercase;
+}
+.ld-namebox th,.ld-namebox td{
+    text-align:center;
+    text-transform:uppercase;
+}
+.ld-trfir{
+    width:115px;
+}
+.ld-trsec{
+    width:170px;
+}
+.ld-namebox td{
+    color:#666;
+}
+td.ld-moneycolor{
+    color:#ffa201;
+}
+/* *************报名开始************* */
+.ld-baoming-di{
+    width:100%;height:696px;
+    background:#fff;
+}
+.ld-baoming-con{
+    width:1200px;height:auto;
+    margin:0 auto;
+    overflow:hidden;
+}
+.ld-baoming-lis{
+    float:left;
+    width:398px;height:627px;
+    padding:0 101px;
+    margin-top:38px;
+    background:url(../../../images/uek/images/ld_images/ld-bm01.png) center center no-repeat;
+}
+
+/*蓝球*/
+.ld-bm-top{
+    width:100%;height:243px;
+    padding-top:36px;
+}
+.ld-blueball{
+    width:226px;
+    height:226px;
+    position:relative;
+    left:0;right:0;top:0;bottom:0;
+    margin:auto;
+    overflow:hidden;
+}
+.ld-wave-border{
+    width:226px;
+    height:226px;
+    position:absolute;
+    left:0;top:0;
+    z-index:10;
+}
+.ld-wave{
+    display:block;
+    width:226px;
+    height:452px;
+    position:absolute;
+    z-index:9;
+}
+.ld-blue-num{
+    position:absolute;
+    left:0;
+    top:44px;
+    font-size:39px;
+    width:110%;
+    height:50px;
+    text-align:center;
+    color:#fff;
+    z-index:11;
+    font-weight:normal;
+}
+.ld-blue-num span{
+    font-size:79px;
+    font-family:Impact; 
+    margin-left:-10px;
+    margin-right:5px;  
+}
+.ld-baoming{
+    position:absolute;
+    width:100%;
+    height:20px;
+    left:0;
+    bottom:72px;
+    font-size:33px;
+    color:#fff;
+    font-weight:normal;
+    text-align:center;
+    z-index:11;
+}
+/*蓝球结束*/
+
+.ld-baoming-lis h2{
+    width:100%;height:60px;
+    text-align:center;line-height: 60px;
+    font-size:20px;
+    margin-bottom:10px;
+}
+.bm-middle{
+    width:100%;
+    overflow:hidden;
+}
+/*报名左侧*/
+.ld-bm-left{
+    float:left;
+    width:200px;height:136px;
+    overflow:hidden;
+}
+.ld-bm-left h3{
+    width:100%;height:20px;
+    text-align:center;line-height:20px;
+    font-size:14px;
+}
+.ld-bm-btm{
+    padding-left:20px;
+    margin-left:44px;
+    margin-top:5px;
+    background:url(../../../images/uek/images/ld_images/ld-bm03.png) left 10px no-repeat;
+}
+.ld-bm-btm li{
+    height:22px;
+    line-height:22px;
+    font-size:12px;
+    color:#333;
+}
+/*报名右侧*/
+.ld-bm-rightbox{
+    float:right;
+    width:154px;height:136px;
+    padding-right:44px;
+    overflow:hidden;
+}
+.ld-bm-right{
+    float:right;
+    width:100%;
+    margin-bottom:-13px;
+}
+.ld-bm-right li{
+    width:100%;height:35px;
+    margin-bottom:13px;
+    
+}
+.ld-bm-right h3,.ld-bm-right p{
+    text-align:right;
+    padding-right:20px;
+}
+.ld-bm-right h3{
+    font-size:14px;
+    margin-bottom:6px;
+    position:relative;
+}
+.ld-bm-right p{
+    font-size:12px;
+    color:#999;
+}
+.ld-bm-titspan{
+    display:block;
+    width:7px;height:7px;
+    background:#ffc000;
+    position:absolute;
+    right:0;top:5px;
+}
+
+/*报名下面按钮*/
+.ld-bm-btn a{
+    display:block;
+    width:199px;height:50px;
+    text-align:center;line-height:50px;
+    margin:26px auto;
+    background:#00affe;
+    border-radius:50px;
+    color:#fff;
+    font-size:23px;
+    cursor:pointer;
+}
+.ld-bm-btn a:hover{
+    background:#2691fd;
+}

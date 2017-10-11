@@ -1,0 +1,17 @@
+<!-- ***************************  banner ****************************  -->
+        <div class="ljg-banner-container ljg-banner-container-inside">
+            <div class="ljg-banner-inner">
+                <!-- 图片 -->
+                <ul class="ljg-banner-ul">
+                    {pc:content action="lists" catid="77" moreinfo="1"}
+                        {php $i=0}
+                        {loop $data $v}
+                            <li class="ljg-banner-lis{if $i==0} ljg-banner-lis-active{/if}">
+                                <a href="javascript:;"><img data-src="{$v[carousel]}"/></a>
+                            </li>
+                        {php $i++}
+                        {/loop}
+                    {/pc}
+                </ul>
+            </div><!-- inner结束 -->
+        </div><!-- banner结束 -->
